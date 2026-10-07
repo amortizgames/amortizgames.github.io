@@ -327,6 +327,29 @@ a:hover { color: var(--accent-teal-light); }
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* ── Assets for creators ── */
+.assets-intro { text-align: center; max-width: 560px; margin: 0.5rem auto 2.5rem; }
+.assets-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+.asset-card { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.2rem; background: var(--bg-card);
+  border: 1px solid var(--border-subtle); text-decoration: none; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.asset-card:hover { border-color: var(--accent-teal); box-shadow: 0 0 24px var(--accent-teal-glow); }
+.asset-card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 0.6rem; }
+.asset-wide { grid-column: 1 / -1; }
+.asset-wide img { height: auto; max-height: 260px; object-fit: cover; }
+.asset-light img { background: #cfd8d3; padding: 0.6rem; }
+.asset-name { font-family: 'Cinzel', serif; color: var(--text-primary); font-size: 0.95rem; letter-spacing: 0.06em; }
+.asset-meta { color: var(--text-dim); font-size: 0.8rem; }
+.assets-download { text-align: center; margin-top: 2.5rem; }
+.assets-download .btn { display: inline-block; }
+.assets-download p { margin-top: 0.9rem; color: var(--text-secondary); font-size: 0.9rem; }
+
+/* ── X posts ── */
+.x-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; align-items: start; }
+.x-post { min-width: 0; }
+.x-post .twitter-tweet { margin: 0 auto !important; }
+.x-post blockquote.twitter-tweet { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 1.2rem; color: var(--text-secondary); font-size: 0.92rem; }
+.x-post blockquote.twitter-tweet a { color: var(--accent-teal); }
+
 /* ── Video Cards ── */
 .video-grid {
   display: grid;
@@ -780,6 +803,8 @@ a:hover { color: var(--accent-teal-light); }
     <div class="hero-buttons">
       <a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/" class="btn btn-primary" target="_blank" rel="noopener">View on Steam</a>
       <a href="#press-materials" class="btn">&darr; Press Materials</a>
+      <a href="#assets" class="btn">&darr; Logos &amp; Art</a>
+      <a href="https://x.com/AmortizGames" class="btn" target="_blank" rel="noopener">X / Twitter</a>
     </div>
   </div>
 </section>
@@ -797,7 +822,7 @@ a:hover { color: var(--accent-teal-light); }
   <div class="about-grid">
     <div class="about-description">
       <h3>The Rhythm of Survival</h3>
-      <p>In a world consumed by shadow, your music is your only conduit. <strong style="color:var(--text-primary)">The Shaman's Ark</strong> is a dark Metroidvania inspired by the raw aesthetics of nomadic Asian cultures. Here, silence is your enemy &mdash; and the drumbeat is your lifeblood.</p>
+      <p>In a world consumed by shadow, your music is your only conduit. <strong style="color:var(--text-primary)">The Shaman's Ark</strong> is a dark Metroidvania built on the nomad and shaman culture of Central Asia, where its two developers live. Here, silence is your enemy &mdash; and the drumbeat is your lifeblood.</p>
 
       <h3>Key Features</h3>
       <ul>
@@ -821,8 +846,9 @@ a:hover { color: var(--accent-teal-light); }
       <div class="fact-row"><span class="fact-label">Genre</span><span class="fact-value">Action-Adventure / Metroidvania</span></div>
       <div class="fact-row"><span class="fact-label">Platforms</span><span class="fact-value">Steam, Nintendo Switch, iOS</span></div>
       <div class="fact-row"><span class="fact-label">Status</span><span class="fact-value">Out now on Steam &middot; Switch &amp; iOS soon</span></div>
-      <div class="fact-row"><span class="fact-label">Engine</span><span class="fact-value">Unity (URP)</span></div>
+      <div class="fact-row"><span class="fact-label">Engine</span><span class="fact-value">Unity</span></div>
       <div class="fact-row"><span class="fact-label">Languages</span><span class="fact-value">EN, RU, DE, ZH, JA</span></div>
+      <div class="fact-row"><span class="fact-label">X / Twitter</span><span class="fact-value"><a href="https://x.com/AmortizGames" target="_blank" rel="noopener">@AmortizGames</a></span></div>
       <div class="fact-row"><span class="fact-label">Input</span><span class="fact-value">Full controller support</span></div>
       <div class="fact-row" style="border:none"><span class="fact-label">Contact</span><span class="fact-value"><a href="mailto:amortizgames@gmail.com">amortizgames@gmail.com</a></span></div>
     </aside>
@@ -840,74 +866,100 @@ a:hover { color: var(--accent-teal-light); }
 <section class="section" id="screenshots">
   <div class="screenshots-intro fade-in">
     <h2>Screenshots</h2>
-    <p>Click any image for fullscreen view. All assets free to use for editorial coverage.</p>
+    <p>Captured in the Steam version. Click any image for fullscreen view. All assets are free to use for editorial coverage, videos and streams.</p>
   </div>
 
   <div class="screenshot-grid">
     <div class="screenshot-card fade-in" data-index="0">
-      <img src="images/GameCamera_05_gravetown_2026-04-23_23-46-33.png" alt="Gravetown — ruined city with spirit creature" loading="lazy">
-      <div class="screenshot-label">Gravetown</div>
-    </div>
-    <div class="screenshot-card fade-in" data-index="1">
-      <img src="images/GameCamera_02_valley_of_whispers_2026-04-23_23-43-30.png" alt="Valley of Whispers — ancient spirits among standing stones" loading="lazy">
+      <img src="images/screens/01_valley_of_whispers.jpg" alt="Valley of Whispers — the shaman among standing stones and spirit mushrooms" loading="lazy">
       <div class="screenshot-label">Valley of Whispers</div>
     </div>
+    <div class="screenshot-card fade-in" data-index="1">
+      <img src="images/screens/02_eye_of_the_storm.jpg" alt="The Eye of the Storm rises above a ring of spirit lights" loading="lazy">
+      <div class="screenshot-label">Eye of the Storm</div>
+    </div>
     <div class="screenshot-card fade-in" data-index="2">
-      <img src="images/GameCamera_04_gardens_2026-04-23_23-46-03.png" alt="The Gardens — encounter with skeletal creature" loading="lazy">
-      <div class="screenshot-label">The Gardens</div>
+      <img src="images/screens/03_mountain_pass_red.jpg" alt="Mountain Pass — a crimson rift across the cliffs" loading="lazy">
+      <div class="screenshot-label">Mountain Pass</div>
     </div>
     <div class="screenshot-card fade-in" data-index="3">
-      <img src="images/GameCamera_06_stormfield_2026-04-23_23-47-25.png" alt="Stormfield — foggy encounter with spirit" loading="lazy">
-      <div class="screenshot-label">The Stormfield</div>
+      <img src="images/screens/04_fetid_source.jpg" alt="The Fetid Source — the second Seal in its ochre haze" loading="lazy">
+      <div class="screenshot-label">The Fetid Source</div>
     </div>
     <div class="screenshot-card fade-in" data-index="4">
-      <img src="images/GameCamera_09_bloodriver_2026-04-23_23-51-00.png" alt="Blood River — dark riverlands with bone creature" loading="lazy">
-      <div class="screenshot-label">Blood River</div>
+      <img src="images/screens/05_giver_of_flies.jpg" alt="The Giver of Flies glows over a dark arena" loading="lazy">
+      <div class="screenshot-label">Giver of Flies</div>
     </div>
     <div class="screenshot-card fade-in" data-index="5">
-      <img src="images/GameCamera_01_temple_2026-04-23_23-42-49.png" alt="The Temple — entrance to the ancient ruins" loading="lazy">
-      <div class="screenshot-label">The Temple</div>
+      <img src="images/screens/06_rhythm_battle_eye_of_the_storm.jpg" alt="Rhythm battle against the Eye of the Storm — drum ring and runes" loading="lazy">
+      <div class="screenshot-label">Rhythm Battle</div>
     </div>
     <div class="screenshot-card fade-in" data-index="6">
-      <img src="images/GameCamera_07_mountains_2026-04-23_23-48-17.png" alt="The Mountains — treacherous mountain path" loading="lazy">
-      <div class="screenshot-label">The Mountains</div>
+      <img src="images/screens/07_rhythm_battle_giver_of_flies.jpg" alt="Rhythm battle against the Giver of Flies" loading="lazy">
+      <div class="screenshot-label">Colossal Trial</div>
     </div>
     <div class="screenshot-card fade-in" data-index="7">
-      <img src="images/GameCamera_08_stonehollow_2026-04-23_23-48-48.png" alt="Stonehollow — underground caverns" loading="lazy">
-      <div class="screenshot-label">Stonehollow</div>
+      <img src="images/screens/12_rhythm_battle_dark_monolith_1.jpg" alt="Rhythm battle against the Dark Monolith — a turquoise spirit wave hits for -21" loading="lazy">
+      <div class="screenshot-label">Dark Monolith &middot; next update</div>
     </div>
     <div class="screenshot-card fade-in" data-index="8">
-      <img src="images/GameCamera_10_forest_2026-04-23_23-51-34.png" alt="The Dark Forest — haunted woodland" loading="lazy">
-      <div class="screenshot-label">The Dark Forest</div>
+      <img src="images/screens/13_rhythm_battle_dark_monolith_2.jpg" alt="Rhythm battle — a green arc sweeps the arena as the shaman strikes" loading="lazy">
+      <div class="screenshot-label">Rhythm Combat &middot; next update</div>
     </div>
     <div class="screenshot-card fade-in" data-index="9">
-      <img src="images/06_stormfield_battle.png" alt="Ritualistic combat in the Stormfield" loading="lazy">
-      <div class="screenshot-label">Ritualistic Combat</div>
+      <img src="images/screens/14_rhythm_battle_dark_monolith_3.jpg" alt="A purple rune-cast burst lands for -38" loading="lazy">
+      <div class="screenshot-label">Rune Cast &middot; next update</div>
     </div>
     <div class="screenshot-card fade-in" data-index="10">
-      <img src="images/01_boss_battle.png" alt="Boss battle — Temple Guardian" loading="lazy">
-      <div class="screenshot-label">Temple Guardian</div>
+      <img src="images/screens/15_rhythm_battle_dark_monolith_4.jpg" alt="The shaman casts a spirit rune at the Dark Monolith" loading="lazy">
+      <div class="screenshot-label">Spirit Attack &middot; next update</div>
     </div>
     <div class="screenshot-card fade-in" data-index="11">
-      <img src="images/13_boss_battle.png" alt="Boss battle — The Mooshroom" loading="lazy">
-      <div class="screenshot-label">Colossal Trial</div>
+      <img src="images/screens/08_mountain_pass.jpg" alt="Mountain Pass — ice-blue ruins and a balbal idol" loading="lazy">
+      <div class="screenshot-label">The Mountains</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="12">
+      <img src="images/screens/09_amulets.jpg" alt="Amulet panel — bone amulets that reshape your build" loading="lazy">
+      <div class="screenshot-label">Amulets</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="13">
+      <img src="images/screens/10_skill_rune.jpg" alt="Skill rune — Sound Wave, a powerful drum strike" loading="lazy">
+      <div class="screenshot-label">Shamanic Skills</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="14">
+      <img src="images/screens/11_map_jp.jpg" alt="The hand-drawn map of the Ark, fully explored (Japanese UI)" loading="lazy">
+      <div class="screenshot-label">Map (JP)</div>
     </div>
   </div>
 
   <div class="video-grid">
     <div class="video-card fade-in">
       <video autoplay muted loop playsinline preload="metadata">
-        <source src="images/battle.webm" type="video/webm">
+        <source src="images/clip_monolith_battle.mp4" type="video/mp4">
       </video>
       <span class="video-badge">Video</span>
-      <div class="screenshot-label">Ritualistic Combat</div>
+      <div class="screenshot-label">Rhythm Combat &mdash; new battle effects, coming in the next update</div>
     </div>
     <div class="video-card fade-in">
       <video autoplay muted loop playsinline preload="metadata">
-        <source src="images/boss_battle.webm" type="video/webm">
+        <source src="images/share_battle.mp4" type="video/mp4">
       </video>
       <span class="video-badge">Video</span>
-      <div class="screenshot-label">Boss Battle</div>
+      <div class="screenshot-label">Rhythm Combat &mdash; the Gardens</div>
+    </div>
+    <div class="video-card fade-in">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="images/clip_mountains.mp4" type="video/mp4">
+      </video>
+      <span class="video-badge">Video</span>
+      <div class="screenshot-label">The Mountain Pass</div>
+    </div>
+    <div class="video-card fade-in">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="images/clip_boss_arena.mp4" type="video/mp4">
+      </video>
+      <span class="video-badge">Video</span>
+      <div class="screenshot-label">Boss Arena</div>
     </div>
   </div>
 </section>
@@ -916,6 +968,45 @@ a:hover { color: var(--accent-teal-light); }
 <div class="divider">
   <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
     <path d="M0,20 C180,50 360,10 540,35 C720,60 900,5 1080,30 C1260,55 1380,15 1440,25 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ ASSETS ═══════════════ -->
+<section class="section fade-in" id="assets">
+  <h2>Assets for Creators</h2>
+  <p class="assets-intro">Streaming or covering the game? Use anything here for thumbnails, overlays, videos and articles. No need to ask.</p>
+  <div class="assets-grid">
+    <a class="asset-card asset-wide" href="downloads/key_art_library_hero_3840x1240.png" download>
+      <img src="downloads/key_art_library_hero_3840x1240.png" alt="Key art: the shaman in a turquoise sigil inside a dark temple" loading="lazy">
+      <span class="asset-name">Key art</span><span class="asset-meta">PNG &middot; 3840&times;1240</span>
+    </a>
+    <a class="asset-card" href="downloads/logo_shamans_ark_glow.png" download>
+      <img src="downloads/logo_shamans_ark_glow.png" alt="The Shaman's Ark logo, glowing" loading="lazy">
+      <span class="asset-name">Game logo</span><span class="asset-meta">PNG, transparent &middot; 1013&times;614</span>
+    </a>
+    <a class="asset-card" href="downloads/logo_shamans_ark_emblem_white.png" download>
+      <img src="downloads/logo_shamans_ark_emblem_white.png" alt="The Shaman's Ark emblem logo, white" loading="lazy">
+      <span class="asset-name">Emblem logo</span><span class="asset-meta">PNG, transparent &middot; 1589&times;2252</span>
+    </a>
+    <a class="asset-card asset-light" href="downloads/logo_amortizgames_dark.png" download>
+      <img src="downloads/logo_amortizgames_dark.png" alt="Amortiz Games logo, dark" loading="lazy">
+      <span class="asset-name">Studio logo (dark)</span><span class="asset-meta">PNG, transparent &middot; 736&times;650</span>
+    </a>
+    <a class="asset-card" href="downloads/logo_amortizgames_white.png" download>
+      <img src="downloads/logo_amortizgames_white.png" alt="Amortiz Games logo, white" loading="lazy">
+      <span class="asset-name">Studio logo (white)</span><span class="asset-meta">PNG, transparent &middot; 736&times;650</span>
+    </a>
+  </div>
+  <div class="assets-download">
+    <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1V3fxxjoTaqEggVpYxJ4TkNkC78ZsKRvB?usp=sharing" target="_blank" rel="noopener">Full press kit on Google Drive</a>
+    <p>Everything in full quality: screenshots, key art, logos, the release trailer (1080p), gameplay and battle videos with sound, a behind-the-scenes music video and 21 soundtrack tracks.</p>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
   </svg>
 </div>
 
@@ -945,12 +1036,39 @@ a:hover { color: var(--accent-teal-light); }
   </svg>
 </div>
 
+<!-- ═══════════════ X / TWITTER ═══════════════ -->
+<section class="section fade-in" id="x-posts">
+  <h2>From @AmortizGames</h2>
+  <p class="assets-intro">We post devlog clips, bosses and behind-the-scenes on X. A few favourites:</p>
+  <div class="x-grid">
+    <div class="x-post">
+      <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Silence is the enemy. The drum is your lifeblood. 🥁<br><br>The Shaman&#39;s Ark — a dark Metroidvania with rhythm-driven combat, set in a shamanic nomad&#39;s post-apocalypse.<br>Steam 🇯🇵 Full Japanese support<br>🛒 <a href="https://t.co/fLHlXY89DQ">https://t.co/fLHlXY89DQ</a><a href="https://x.com/hashtag/%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0?src=hash&amp;ref_src=twsrc%5Etfw">#インディーゲーム</a> <a href="https://x.com/hashtag/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA%E3%82%B2%E3%83%BC%E3%83%A0?src=hash&amp;ref_src=twsrc%5Etfw">#個人開発ゲーム</a> <a href="https://x.com/hashtag/Metroidvania?src=hash&amp;ref_src=twsrc%5Etfw">#Metroidvania</a> <a href="https://x.com/hashtag/IndieGame?src=hash&amp;ref_src=twsrc%5Etfw">#IndieGame</a> <a href="https://t.co/9kjj4FnvrT">pic.twitter.com/9kjj4FnvrT</a></p>&mdash; Amortiz Games｜シャーマンズ・アーク (@AmortizGames) <a href="https://x.com/AmortizGames/status/2071140151796048073?ref_src=twsrc%5Etfw">June 28, 2026</a></blockquote>
+    </div>
+    <div class="x-post">
+      <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">The double jump is the last of the four abilities in The Shaman&#39;s Ark and you take it from the Giver of Flies. The map you already walked opens up again.<a href="https://x.com/hashtag/Metroidvania?src=hash&amp;ref_src=twsrc%5Etfw">#Metroidvania</a> <a href="https://x.com/hashtag/bossfight?src=hash&amp;ref_src=twsrc%5Etfw">#bossfight</a> <a href="https://x.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://t.co/tST6Cwl2jF">pic.twitter.com/tST6Cwl2jF</a></p>&mdash; Amortiz Games｜シャーマンズ・アーク (@AmortizGames) <a href="https://x.com/AmortizGames/status/2102684718135390520?ref_src=twsrc%5Etfw">September 23, 2026</a></blockquote>
+    </div>
+    <div class="x-post">
+      <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">A mechanic we found almost by accident while building the true ending: step through the right mushroom-gate and the world itself changes around you. Some of our favourite secrets live in there.<a href="https://x.com/hashtag/Metroidvania?src=hash&amp;ref_src=twsrc%5Etfw">#Metroidvania</a> <a href="https://x.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://x.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://t.co/Jrc1dYKmWw">pic.twitter.com/Jrc1dYKmWw</a></p>&mdash; Amortiz Games｜シャーマンズ・アーク (@AmortizGames) <a href="https://x.com/AmortizGames/status/2105175123552809170?ref_src=twsrc%5Etfw">September 30, 2026</a></blockquote>
+    </div>
+  </div>
+  <div class="assets-download">
+    <a class="btn" href="https://x.com/AmortizGames" target="_blank" rel="noopener">Follow @AmortizGames on X</a>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C360,0 720,60 1080,20 C1260,5 1380,40 1440,30 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
 <!-- ═══════════════ CONTACT ═══════════════ -->
 <section class="section contact-section fade-in" id="contact">
   <h2>Links &amp; Contact</h2>
   <div class="contact-links">
     <a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/" class="contact-link" target="_blank" rel="noopener">Steam</a>
-    <a href="https://twitter.com/AmortizGames" class="contact-link" target="_blank" rel="noopener">Twitter / X</a>
+    <a href="https://x.com/AmortizGames" class="contact-link" target="_blank" rel="noopener">X / Twitter</a>
   </div>
   <p class="contact-email">Press inquiries: <a href="mailto:amortizgames@gmail.com">amortizgames@gmail.com</a></p>
   <p class="footer-note">&copy; Amortiz Games. All screenshots and assets may be used freely for editorial and press coverage.</p>
@@ -1140,5 +1258,6 @@ a:hover { color: var(--accent-teal-light); }
 })();
 </script>
 
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
