@@ -435,6 +435,21 @@ a:hover { color: var(--accent-teal-light); }
 .fact-label { flex: none; padding-top: 0.15em; }
 .fact-value small { color: var(--text-dim); font-size: 0.8em; }
 
+/* ── Player quotes, let's plays ── */
+.quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+.quote { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 1.5rem 1.6rem; display: flex; flex-direction: column; }
+.quote-text { color: var(--text-primary); font-style: italic; }
+.quote-original { margin-top: 0.7rem; font-size: 0.85rem; color: var(--text-dim); }
+.quote figcaption { margin-top: auto; padding-top: 1rem; font-size: 0.8rem; }
+.play-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.4rem 1.2rem; }
+.play { display: flex; flex-direction: column; gap: 0.15rem; color: var(--text-secondary); min-width: 0; }
+.play-thumb { display: block; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 0.5rem; background: var(--bg-card); }
+.play-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.play:hover .play-thumb img { transform: scale(1.04); }
+.play-who { color: var(--text-primary); font-weight: 600; }
+.play-meta { font-size: 0.82rem; }
+.play-views { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-teal); margin-top: 0.2rem; }
+
 /* ── Lightbox ── */
 .lightbox {
   position: fixed;
@@ -1073,6 +1088,96 @@ a:hover { color: var(--accent-teal-light); }
 <div class="divider">
   <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
     <path d="M0,35 C480,5 960,55 1440,25 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ PLAYERS ═══════════════ -->
+<section class="section" id="players">
+  <div class="screenshots-intro fade-in">
+    <h2>What Players Say</h2>
+    <p><a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/#app_reviews_hash" target="_blank" rel="noopener">Positive on Steam: 97% of 47 user reviews</a> (read 14 Nov 2026). The quotes below are verbatim; each links to its source.</p>
+  </div>
+  <div class="quote-grid">
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;Metroidvania meets rhythm game meets dark fantasy in a unique setting... It's as if this game was specially tailored to meet my demands.&rdquo;</p>
+      <figcaption><a href="https://steamcommunity.com/id/reixena/recommended/2433860/" target="_blank" rel="noopener">Steam review · 15.1 h played</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;Finished the game within 13 hours. No crucial bugs, just few minor. Personal best indie game of 2025 so far.&rdquo;</p>
+      <figcaption><a href="https://steamcommunity.com/profiles/76561198043511223/recommended/2433860/" target="_blank" rel="noopener">Steam review · 14.8 h played</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;The semi-two-dimensional art style and rhythm focused battling system are things that immediately pulled me in.&rdquo;</p>
+      <figcaption><a href="https://steamcommunity.com/id/tsgbeta/recommended/2433860/" target="_blank" rel="noopener">Steam review · 10.4 h played</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;There should be more games like this. That's how much fun it was.&rdquo;</p><p class="quote-original" lang="ja">Japanese original: &laquo;もっとあっていいんじゃないのかな、こういうゲーム。ってぐらい面白かった。&raquo;</p>
+      <figcaption><a href="https://youtu.be/NKsJpMr03GQ?t=3341" target="_blank" rel="noopener">南国まつたけ (Nangoku Matsutake) · YouTube, final episode, 55:44</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;The Shaman's Ark is a little indie gem for metroidvania fans who want strong atmosphere, different combat and challenging exploration.&rdquo;</p><p class="quote-original" lang="es">Spanish original: &laquo;The Shaman’s Ark es una joyita indie para fans de los metroidvanias que buscan algo con atmósfera fuerte, combates distintos, y exploración desafiante.&raquo;</p>
+      <figcaption><a href="https://steamcommunity.com/profiles/76561198076198605/recommended/2433860/" target="_blank" rel="noopener">Steam review</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;The QTE combat system drives you to despair at first, but you get used to it quickly and start dancing along to the rhythm.&rdquo;</p><p class="quote-original" lang="ru">Russian original: &laquo;Боевая система qte система по первости ввергает в отчаяние, но к ней быстро привыкаешь, начинаешь пританцовывать в ритм.&raquo;</p>
+      <figcaption><a href="https://steamcommunity.com/profiles/76561198369147514/recommended/2433860/" target="_blank" rel="noopener">Steam review · 7.5 h played</a></figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshots-intro fade-in" style="margin-top:4rem">
+    <h3>Played By</h3>
+    <p>Public let&#39;s plays and streams in four languages. View counts read on 14 Nov 2026.</p>
+  </div>
+  <div class="play-grid">
+    <a class="play fade-in" href="https://youtu.be/0-D-oJ_IjII" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/0-D-oJ_IjII/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">Zhain Gaming</span>
+      <span class="play-meta">English titles, no commentary &middot; YouTube</span>
+      <span class="play-meta">Full game walkthrough with the ending</span>
+      <span class="play-views">2,097 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/68-Lh2yGGDE" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/68-Lh2yGGDE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">南国まつたけ Nangoku Matsutake</span>
+      <span class="play-meta">Japanese &middot; YouTube</span>
+      <span class="play-meta">Nine-part series, finished the game (part 1)</span>
+      <span class="play-views">450 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/kG8Xmi9XiXg" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/kG8Xmi9XiXg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">demajen</span>
+      <span class="play-meta">English &middot; YouTube</span>
+      <span class="play-meta">Map and review; also a full playthrough</span>
+      <span class="play-views">362 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/DuazN0AbxHg" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/DuazN0AbxHg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">ねこみさご Nekomisago</span>
+      <span class="play-meta">Japanese &middot; YouTube</span>
+      <span class="play-meta">First-look stream</span>
+      <span class="play-views">191 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/v35vUhlD-cw" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/v35vUhlD-cw/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">Mariatxi Indie&acute;s Room</span>
+      <span class="play-meta">Spanish &middot; YouTube</span>
+      <span class="play-meta">First look</span>
+      <span class="play-views">78 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/PQx5l1_QK08" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/PQx5l1_QK08/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">Barabas &#9658; Play</span>
+      <span class="play-meta">Russian &middot; YouTube</span>
+      <span class="play-meta">First look</span>
+      <span class="play-views">32 views</span>
+    </a>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,28 C400,0 800,58 1440,22 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
   </svg>
 </div>
 
