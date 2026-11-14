@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leviathan: Rhino — Press Kit</title>
+<meta name="description" content="Press kit for Leviathan: Rhino, an existential horror game about the final days of an old man in a small village while a giant Leviathan draws near. Developed by AmortizGames.">
+<meta property="og:title" content="Leviathan: Rhino — Press Kit">
+<meta property="og:description" content="The final days of an old man in a small village while a giant Leviathan draws near. Out on Steam; iPhone, iPad and Nintendo Switch coming.">
+<meta property="og:image" content="https://amortizgames.github.io/presskit/leviathan-rhino/images/keyart_church_header.jpg">
+<style>
+@font-face { font-family: 'Pixeloid'; src: url('fonts/PixeloidSans-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0b0b;
+  --bg-2: #101212;
+  --panel: #141716;
+  --line: #2a302d;
+  --ink: #e7e7e7;          /* the game's own UI grey */
+  --ink-2: #a3aaa6;
+  --ink-3: #6b736f;
+  --fog: #7f948a;          /* graveyard fog green */
+  --storm: #b07a7a;        /* red-storm sky */
+  --pixel: 'Pixeloid', 'Courier New', monospace;
+  --body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+html { background: var(--bg); color: var(--ink); scroll-behavior: smooth; }
+body {
+  font-family: var(--body);
+  line-height: 1.65;
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+/* CRT scanlines + vignette over the whole page, like the game's screen */
+body::after {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 500;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.16) 0, rgba(0,0,0,0.16) 1px, transparent 1px, transparent 3px),
+    radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%);
+}
+
+a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink-3); transition: border-color .2s, color .2s; }
+a:hover { color: #fff; border-color: var(--ink); }
+
+h1, h2, h3 { font-family: var(--pixel); font-weight: 700; letter-spacing: .06em; line-height: 1.25; }
+h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); color: var(--ink); margin-bottom: .4rem; text-transform: uppercase; }
+h2 small { font-size: .55em; color: var(--ink-3); letter-spacing: .12em; }
+h3 { font-size: 1rem; color: var(--fog); text-transform: uppercase; margin-bottom: .5rem; }
+p { color: var(--ink-2); }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 4.5rem 1.5rem; }
+.sub { color: var(--ink-3); max-width: 640px; margin-bottom: 2rem; }
+.rule { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); border: 0; }
+
+/* ── Hero ── */
+.hero { position: relative; background: var(--bg); overflow: hidden; }
+.hero img.bg { display: block; width: 100%; height: auto; aspect-ratio: 3840 / 1646; max-height: 78vh; object-fit: cover; }
+.hero::before { content: ''; position: absolute; left: 0; right: 0; top: 0; z-index: 1; height: min(78vh, 42.86vw); background: linear-gradient(180deg, rgba(10,11,11,0) 60%, rgba(10,11,11,1) 100%); pointer-events: none; }
+.hero-inner { position: relative; z-index: 2; width: 100%; max-width: 1120px; margin: 0 auto; padding: 1.5rem 1.5rem 3rem; }
+.kicker { font-family: var(--pixel); font-size: .8rem; letter-spacing: .3em; color: var(--ink-2); text-transform: uppercase; margin-bottom: .8rem; }
+.hero h1 { font-size: clamp(2.2rem, 7vw, 4.6rem); text-transform: uppercase; color: var(--ink); text-shadow: 0 3px 0 rgba(0,0,0,.6); }
+.hero h1 span { font-size: .5em; color: var(--ink-2); }
+.tag { font-size: clamp(1rem, 2.2vw, 1.25rem); color: var(--ink-2); margin: 1rem 0 1.8rem; max-width: 600px; }
+.buttons { display: flex; flex-wrap: wrap; gap: .8rem; }
+.btn { font-family: var(--pixel); font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; padding: .9em 1.6em; border: 1px solid var(--ink); color: var(--ink); background: rgba(10,11,11,.55); transition: background .2s, color .2s; }
+.btn:hover { background: var(--ink); color: var(--bg); }
+.btn.solid { background: var(--ink); color: var(--bg); }
+.btn.solid:hover { background: #fff; }
+
+/* ── Facts ── */
+.facts-grid { display: grid; grid-template-columns: 1fr 360px; gap: 3rem; align-items: start; }
+.about p { margin-bottom: 1rem; }
+.about ul { list-style: none; margin: 1rem 0 1.2rem; }
+.about li { padding-left: 1.4em; position: relative; margin-bottom: .5rem; color: var(--ink-2); }
+.about li::before { content: ''; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; background: var(--fog); }
+.about .note { font-size: .9rem; color: var(--ink-3); border-left: 2px solid var(--line); padding-left: 1rem; }
+.sheet { background: var(--panel); border: 1px solid var(--line); padding: 1.4rem 1.5rem; }
+.sheet h3 { padding-bottom: .7rem; border-bottom: 1px solid var(--line); margin-bottom: .4rem; }
+.row { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0; border-bottom: 1px solid rgba(255,255,255,.05); font-size: .92rem; }
+.row:last-child { border: 0; }
+.row dt { font-family: var(--pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); padding-top: .2rem; flex: none; }
+.row dd { color: var(--ink); text-align: right; }
+.row dd small { color: var(--ink-3); display: block; font-size: .78rem; line-height: 1.4; }
+.rights { margin-top: 1.2rem; padding: 1rem 1.2rem; border: 1px solid var(--line); background: var(--bg-2); color: var(--ink); font-size: .95rem; }
+
+/* ── CRT-framed media ── */
+.crt { position: relative; background: #000; border: 1px solid var(--line); border-radius: 14px / 18px; overflow: hidden; box-shadow: inset 0 0 40px rgba(0,0,0,.7); }
+.crt img, .crt video { display: block; width: 100%; height: auto; }
+
+.trailer { max-width: 960px; margin-top: 1.5rem; }
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+.shots button { all: unset; cursor: zoom-in; display: block; }
+.shots .crt { transition: transform .3s, border-color .3s; }
+.shots button:hover .crt, .shots button:focus-visible .crt { transform: translateY(-3px); border-color: var(--fog); }
+.gifs { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+.gifs figcaption, .shots .cap { font-family: var(--pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); padding-top: .5rem; }
+
+/* ── Played by ── */
+.played { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
+.card { background: var(--panel); border: 1px solid var(--line); display: flex; flex-direction: column; }
+.card a.thumb { display: block; border: 0; position: relative; background: #000; }
+.card a.thumb img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; opacity: .9; transition: opacity .2s; }
+.card a.thumb:hover img { opacity: 1; }
+.card a.thumb::after { content: ''; position: absolute; left: 50%; top: 50%; width: 0; height: 0; margin: -14px 0 0 -9px; border-left: 24px solid rgba(231,231,231,.85); border-top: 14px solid transparent; border-bottom: 14px solid transparent; filter: drop-shadow(0 0 6px #000); }
+.card .meta { padding: 1rem 1.1rem 1.2rem; }
+.card .who { font-family: var(--pixel); font-size: .95rem; color: var(--ink); letter-spacing: .04em; }
+.card .views { font-family: var(--pixel); font-size: .8rem; color: var(--fog); margin-top: .5rem; }
+.card .line { font-size: .85rem; color: var(--ink-3); margin-top: .3rem; }
+.asof { font-size: .8rem; color: var(--ink-3); margin-top: 1.2rem; }
+
+/* ── Players say ── */
+.score { display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem 1.2rem; margin-bottom: 2rem; }
+.score .big { font-family: var(--pixel); font-size: clamp(1.6rem, 4vw, 2.4rem); color: var(--ink); text-transform: uppercase; }
+.score .small { color: var(--ink-3); }
+.quotes { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
+blockquote { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--fog); padding: 1.3rem 1.4rem; }
+blockquote.lead { grid-column: 1 / -1; border-left-color: var(--storm); }
+blockquote p.q { color: var(--ink); font-size: 1.05rem; }
+blockquote.lead p.q { font-size: 1.25rem; }
+blockquote p.orig { color: var(--ink-3); font-size: .9rem; margin-top: .6rem; }
+blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
+
+/* ── Downloads ── */
+.dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.dl figcaption { font-size: .85rem; color: var(--ink-3); padding-top: .5rem; }
+
+/* ── Contact ── */
+.contact { text-align: center; }
+.contact .mail { font-family: var(--pixel); font-size: clamp(1rem, 3vw, 1.5rem); letter-spacing: .06em; margin: 1.2rem 0 2rem; }
+.also { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.also p { margin-bottom: .8rem; font-size: .95rem; }
+.fine { margin-top: 2.5rem; font-size: .75rem; color: var(--ink-3); }
+
+/* ── Lightbox ── */
+.lb { position: fixed; inset: 0; z-index: 1000; background: rgba(4,5,5,.96); display: none; align-items: center; justify-content: center; }
+.lb.on { display: flex; }
+.lb img { max-width: 94vw; max-height: 88vh; }
+.lb button { all: unset; cursor: pointer; position: absolute; color: var(--ink-2); font-family: var(--pixel); font-size: 1.6rem; padding: 1rem; }
+.lb button:hover { color: #fff; }
+.lb .x { top: .5rem; right: 1rem; } .lb .p { left: .5rem; top: 50%; } .lb .n { right: .5rem; top: 50%; }
+
+@media (max-width: 860px) { .facts-grid { grid-template-columns: 1fr; } }
+@media (max-width: 500px) {
+  .wrap { padding: 3rem 1rem; }
+  .hero-inner { padding: 1rem 1rem 2rem; }
+  .shots, .played, .quotes { grid-template-columns: 1fr; }
+  .btn { flex: 1 1 100%; text-align: center; }
+  .row { flex-direction: column; gap: .1rem; } .row dd { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="bg" src="images/keyart_church_header.jpg" alt="Leviathan: Rhino key art — a wooden village church under a red storm sky, a creature in the haze">
+  <div class="hero-inner">
+    <div class="kicker">Press kit &middot; for publishers and press</div>
+    <h1 class="sr-title" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Leviathan: Rhino</h1>
+    <p class="tag">The final days of an old man in a small village while a giant Leviathan draws near. An existential horror about inevitability, attachment, loneliness and guilt.</p>
+    <div class="buttons">
+      <a class="btn solid" href="https://store.steampowered.com/app/4784510/Leviathan_Rhino/" target="_blank" rel="noopener">View on Steam</a>
+      <a class="btn" href="#trailer">Watch trailer</a>
+      <a class="btn" href="#downloads">Assets</a>
+    </div>
+  </div>
+</header>
+
+<hr class="rule">
+
+<section class="wrap" id="facts">
+  <h2>The game</h2>
+  <div class="facts-grid">
+    <div class="about">
+      <p>There are things beyond our control. Changes that cannot be resisted. Sometimes, all we can do is leave, or stay and watch everything we loved disappear.</p>
+      <p>In this world, leviathans, colossal creatures of Lovecraftian scale, have long since become part of everyday life. They cannot be stopped. Humanity can only track their movements and get out of their way in time. But for some, there is nowhere left to go and no reason to leave.</p>
+      <p>Live through the final days of an old man in a small village while a giant Leviathan draws near. Explore the village from a first-person perspective, talk to its residents, and carry out simple everyday tasks.</p>
+      <p>Feed the cow. Visit your neighbor. Listen to the news. Remember the past. Wait.</p>
+      <ul>
+        <li>Six days, one village, one story</li>
+        <li>Hand-drawn characters in a 3D world</li>
+        <li>Single-player, no voice acting: the story is told in text, in 12 languages</li>
+      </ul>
+      <p>Leviathan: Rhino is an existential horror game about inevitability, attachment, loneliness, guilt, and the fragile hope that even at the very end, there may still be light.</p>
+      <p class="note">Content note: the story deals with death, grief and suicide, and includes horror imagery and some violence.</p>
+    </div>
+
+    <aside>
+      <dl class="sheet">
+        <h3>Fact sheet</h3>
+        <div class="row"><dt>Developer</dt><dd>AmortizGames<small>Kyrgyzstan</small></dd></div>
+        <div class="row"><dt>Steam publisher</dt><dd>solarsuit.games</dd></div>
+        <div class="row"><dt>Released</dt><dd>6 November 2026<small>Steam</small></dd></div>
+        <div class="row"><dt>Price</dt><dd>$5.87 USD<small>Steam, US store; launch offer 15% off ($4.98) until 20 November</small></dd></div>
+        <div class="row"><dt>Platforms</dt><dd>Steam: out now<small>iPhone / iPad and Nintendo Switch: coming</small></dd></div>
+        <div class="row"><dt>Genre</dt><dd>Psychological horror, walking simulator<small>first person, single-player</small></dd></div>
+        <div class="row"><dt>Steam reviews</dt><dd>Very Positive<small>95% of 120 reviews, as of 14 Nov 2026</small></dd></div>
+        <div class="row"><dt>Languages</dt><dd>12<small>English, Russian, German, French, Spanish (Spain), Spanish (Latin America), Ukrainian, Polish, Finnish, Serbian, Japanese, Simplified Chinese</small></dd></div>
+        <div class="row"><dt>Engine</dt><dd>Unity</dd></div>
+        <div class="row"><dt>Contact</dt><dd><a href="mailto:amortizgames@gmail.com">amortizgames＠gmail.com</a></dd></div>
+      </dl>
+      <p class="rights">The Steam release is published by solarsuit.games; all other platforms are handled by AmortizGames.</p>
+    </aside>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="wrap" id="trailer">
+  <h2>Trailer</h2>
+  <p class="sub">46 seconds of the game, no commentary. Footage is in-game.</p>
+  <div class="crt trailer">
+    <video controls preload="metadata" poster="images/trailer_poster.jpg" playsinline>
+      <source src="video/leviathan_rhino_trailer_720p.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="gifs">
+    <figure><div class="crt"><img src="video/gif_1.gif" alt="Animated clip: the path to the house, the cow shed, the living room" loading="lazy"></div><figcaption>The house</figcaption></figure>
+    <figure><div class="crt"><img src="video/gif_2.gif" alt="Animated clip: sheep, the village road, the shop and a green car" loading="lazy"></div><figcaption>The village</figcaption></figure>
+    <figure><div class="crt"><img src="video/gif_3.gif" alt="Animated clip: the graveyard and the well at dusk" loading="lazy"></div><figcaption>The graveyard</figcaption></figure>
+    <figure><div class="crt"><img src="video/gif_4.gif" alt="Animated clip: the sky turns red" loading="lazy"></div><figcaption>The storm</figcaption></figure>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="wrap" id="screenshots">
+  <h2>Screenshots</h2>
+  <p class="sub">Click an image for full size. All captured in-game.</p>
+  <div class="shots" id="shots">
+    <button data-full="images/shot_1_cow_shed.jpg"><div class="crt"><img src="images/thumb_1.jpg" alt="The cow in her shed" loading="lazy"></div></button>
+    <button data-full="images/shot_2_living_room.jpg"><div class="crt"><img src="images/thumb_2.jpg" alt="The living room" loading="lazy"></div></button>
+    <button data-full="images/shot_3_fog_church.jpg"><div class="crt"><img src="images/thumb_3.jpg" alt="The church in the fog" loading="lazy"></div></button>
+    <button data-full="images/shot_4_village_road.jpg"><div class="crt"><img src="images/thumb_4.jpg" alt="The village road" loading="lazy"></div></button>
+    <button data-full="images/shot_5_shop_zhiguli.jpg"><div class="crt"><img src="images/thumb_5.jpg" alt="The shop and a green car" loading="lazy"></div></button>
+    <button data-full="images/shot_6_graveyard_church.jpg"><div class="crt"><img src="images/thumb_6.jpg" alt="The graveyard below the church" loading="lazy"></div></button>
+    <button data-full="images/shot_7_well_dusk.jpg"><div class="crt"><img src="images/thumb_7.jpg" alt="The well at dusk" loading="lazy"></div></button>
+    <button data-full="images/shot_8_road_red_sky.jpg"><div class="crt"><img src="images/thumb_8.jpg" alt="A road under a red sky" loading="lazy"></div></button>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="wrap" id="played">
+  <h2>Played by</h2>
+  <p class="sub">Public let's plays and streams of the Steam release. Thumbnails link to the videos on YouTube.</p>
+  <div class="played">
+    <article class="card">
+      <a class="thumb" href="https://www.youtube.com/watch?v=qEGBoM4wwLs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qEGBoM4wwLs/hqdefault.jpg" alt="BigGaming64 video thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
+      <div class="meta"><div class="who">BigGaming64</div><div class="views">76,898 views</div><div class="line">English &middot; YouTube &middot; video &middot; 6 Nov 2026</div></div>
+    </article>
+    <article class="card">
+      <a class="thumb" href="https://www.youtube.com/watch?v=kDC6jgsPLJg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kDC6jgsPLJg/hqdefault.jpg" alt="GENuINE993 video thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
+      <div class="meta"><div class="who">GENuINE993</div><div class="views">39,437 views</div><div class="line">Spanish &middot; YouTube &middot; video &middot; 10 Nov 2026</div></div>
+    </article>
+    <article class="card">
+      <a class="thumb" href="https://www.youtube.com/watch?v=oT1zx7qojbY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/oT1zx7qojbY/hqdefault.jpg" alt="Первый Хоррор Канал stream thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
+      <div class="meta"><div class="who">Первый Хоррор Канал</div><div class="views">28,195 views</div><div class="line">Russian &middot; YouTube &middot; live stream &middot; 6 Nov 2026</div></div>
+    </article>
+    <article class="card">
+      <a class="thumb" href="https://www.youtube.com/watch?v=dqTOCSfk4g0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dqTOCSfk4g0/hqdefault.jpg" alt="Datura Plays stream thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
+      <div class="meta"><div class="who">Datura Plays</div><div class="views">1,899 views</div><div class="line">English &middot; YouTube &middot; live stream, full game &middot; 6 Nov 2026</div></div>
+    </article>
+    <article class="card">
+      <a class="thumb" href="https://www.youtube.com/watch?v=kxVpCOVWdR8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kxVpCOVWdR8/hqdefault.jpg" alt="眩ねも stream thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
+      <div class="meta"><div class="who">眩ねも</div><div class="views">120 views</div><div class="line">Japanese &middot; YouTube &middot; live stream &middot; 12 Nov 2026</div></div>
+    </article>
+  </div>
+  <p class="asof">View counts read on 14 November 2026 and still rising.</p>
+</section>
+
+<hr class="rule">
+
+<section class="wrap" id="players-say">
+  <h2>What players say</h2>
+  <div class="score">
+    <span class="big">Very Positive</span>
+    <span class="small">95% of 120 Steam user reviews are positive (14 Nov 2026) &middot; <a href="https://store.steampowered.com/app/4784510/Leviathan_Rhino/#app_reviews_hash" target="_blank" rel="noopener">read them on Steam</a></span>
+  </div>
+  <div class="quotes">
+    <blockquote class="lead">
+      <p class="q">「小粒かつ独特、物寂しさが常に漂う良作でした」</p>
+      <p class="orig">Our translation: &ldquo;Small, distinctive, a good game with a lonely melancholy always in the air.&rdquo;</p>
+      <footer>ようげ (Youge), on X, 12 Nov 2026 &middot; <a href="https://x.com/Youge2/status/2120768714350182603" target="_blank" rel="noopener">source</a></footer>
+    </blockquote>
+    <blockquote>
+      <p class="q">&ldquo;No cheap jumpscares, just pure atmosphere and a great visual story.&rdquo;</p>
+      <footer>Steam review &middot; <a href="https://steamcommunity.com/id/gamingguide/recommended/4784510/" target="_blank" rel="noopener">source</a></footer>
+    </blockquote>
+    <blockquote>
+      <p class="q">&ldquo;absolutely beautiful writing and design&rdquo;</p>
+      <footer>Steam review &middot; <a href="https://steamcommunity.com/profiles/76561198451248546/recommended/4784510/" target="_blank" rel="noopener">source</a></footer>
+    </blockquote>
+    <blockquote>
+      <p class="q">&ldquo;Short and nice horror game where the horror is the inevitable passing of time and seeing yourself and the people around you slowly die.&rdquo;</p>
+      <footer>Steam review &middot; <a href="https://steamcommunity.com/profiles/76561198099847402/recommended/4784510/" target="_blank" rel="noopener">source</a></footer>
+    </blockquote>
+    <blockquote>
+      <p class="q">&ldquo;the slow degrading of the small town, the flashback sequence, waking up and looking at the horizon to see something coming. I love all of it&rdquo;</p>
+      <footer>Steam review &middot; <a href="https://steamcommunity.com/id/MsDiz/recommended/4784510/" target="_blank" rel="noopener">source</a></footer>
+    </blockquote>
+    <blockquote>
+      <p class="q">&ldquo;Short horror game with a great atmosphere, loved it.&rdquo;</p>
+      <footer>Steam review &middot; <a href="https://steamcommunity.com/profiles/76561198034803294/recommended/4784510/" target="_blank" rel="noopener">source</a></footer>
+    </blockquote>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="wrap" id="downloads">
+  <h2>Logo and key art</h2>
+  <p class="sub">Free to use for editorial coverage. Right-click to save.</p>
+  <div class="dl">
+    <figure><div class="crt" style="background:#161818"><a href="images/title_logo.png" style="border:0"><img src="images/title_logo.png" alt="Leviathan: Rhino title logo" loading="lazy" style="padding:1.5rem"></a></div><figcaption>Title logo (PNG, transparent)</figcaption></figure>
+    <figure><div class="crt"><a href="images/keyart_church_header.jpg" style="border:0"><img src="images/keyart_church_header.jpg" alt="Key art: the church under a red storm" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: church (2560 px)</figcaption></figure>
+    <figure><div class="crt"><a href="images/keyart_graveyard_header.jpg" style="border:0"><img src="images/keyart_graveyard_header.jpg" alt="Key art: the graveyard in fog" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: graveyard (2560 px)</figcaption></figure>
+    <figure><div class="crt"><a href="images/keyart_village_header.jpg" style="border:0"><img src="images/keyart_village_header.jpg" alt="Key art: the village road" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: village road (2560 px)</figcaption></figure>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="wrap contact" id="contact">
+  <h2>Contact</h2>
+  <p class="mail"><a href="mailto:amortizgames@gmail.com">amortizgames＠gmail.com</a></p>
+  <div class="buttons" style="justify-content:center">
+    <a class="btn solid" href="https://store.steampowered.com/app/4784510/Leviathan_Rhino/" target="_blank" rel="noopener">Steam page</a>
+  </div>
+  <div class="also">
+    <p>Also from AmortizGames</p>
+    <a class="btn" href="../">The Shaman's Ark press kit</a>
+  </div>
+  <p class="fine">&copy; AmortizGames. The Steam release is published by solarsuit.games; all other platforms are handled by AmortizGames.</p>
+</section>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+  <button class="x" aria-label="Close">&times;</button>
+  <button class="p" aria-label="Previous">&lsaquo;</button>
+  <img id="lbimg" alt="">
+  <button class="n" aria-label="Next">&rsaquo;</button>
+</div>
+
+<script>
+(function () {
+  var btns = Array.prototype.slice.call(document.querySelectorAll('#shots button'));
+  var lb = document.getElementById('lb'), img = document.getElementById('lbimg'), cur = 0;
+  function show(i) { cur = (i + btns.length) % btns.length; img.src = btns[cur].dataset.full; img.alt = btns[cur].querySelector('img').alt; lb.classList.add('on'); }
+  btns.forEach(function (b, i) { b.addEventListener('click', function () { show(i); }); });
+  lb.querySelector('.x').onclick = function () { lb.classList.remove('on'); };
+  lb.querySelector('.p').onclick = function (e) { e.stopPropagation(); show(cur - 1); };
+  lb.querySelector('.n').onclick = function (e) { e.stopPropagation(); show(cur + 1); };
+  lb.addEventListener('click', function (e) { if (e.target === lb) lb.classList.remove('on'); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('on')) return;
+    if (e.key === 'Escape') lb.classList.remove('on');
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  });
+})();
+</script>
+</body>
+</html>
