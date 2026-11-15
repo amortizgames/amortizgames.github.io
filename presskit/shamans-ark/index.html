@@ -1512,5 +1512,13 @@ a:hover { color: var(--accent-teal-light); }
 </script>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+/* always show the newest page: compare the browser's saved copy with the server's and reload once if they differ */
+(function(){try{var u=location.pathname,k='fresh:'+u;
+fetch(u,{cache:'force-cache'}).then(function(r){return r.text();}).then(function(a){
+return fetch(u,{cache:'reload'}).then(function(r){return r.ok?r.text():a;}).then(function(b){
+var m=String(b.length);if(a!==b&&sessionStorage.getItem(k)!==m){sessionStorage.setItem(k,m);location.reload();}});
+}).catch(function(){});}catch(e){}})();
+</script>
 </body>
 </html>
