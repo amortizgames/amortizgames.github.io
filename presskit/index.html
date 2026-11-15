@@ -78,11 +78,32 @@ main {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 1.25rem 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
-  gap: 1.5rem;
-  align-content: start;
 }
+
+.featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.more-title {
+  margin: 3rem 0 1rem;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.more {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.more .kit-name { font-size: 1.15rem; }
 
 .kit {
   position: relative;
@@ -196,14 +217,15 @@ footer a:hover { color: var(--text); }
 </header>
 
 <main>
-  <a class="kit rooten" href="rooten/">
+  <div class="featured">
+  <a class="kit leviathan" href="leviathan-rhino/">
     <div class="kit-art">
-      <img class="art" src="images/hub/rooten.jpg" alt="" width="1400" height="789">
-      <img class="kit-logo" src="rooten/images/logo.png" alt="Rooten logo">
+      <img class="art" src="images/hub/leviathan_rhino.jpg" alt="" width="1400" height="1000">
+      <img class="kit-logo" src="images/hub/leviathan_rhino_logo.png" alt="Leviathan: Rhino logo">
     </div>
     <div class="kit-body">
-      <div class="kit-name">Rooten</div>
-      <div class="kit-line">A dark hand-drawn adventure: there is only you and the Forest.</div>
+      <div class="kit-name">Leviathan: Rhino</div>
+      <div class="kit-line">An existential horror about the final days of an old man in a small village while a giant Leviathan draws near.</div>
       <div class="kit-meta">Out on Steam</div>
       <div class="kit-open">Open press kit &rarr;</div>
     </div>
@@ -221,19 +243,23 @@ footer a:hover { color: var(--text); }
       <div class="kit-open">Open press kit &rarr;</div>
     </div>
   </a>
+  </div>
 
-  <a class="kit leviathan" href="leviathan-rhino/">
+  <h2 class="more-title">Earlier game</h2>
+  <div class="more">
+  <a class="kit rooten" href="rooten/">
     <div class="kit-art">
-      <img class="art" src="images/hub/leviathan_rhino.jpg" alt="" width="1400" height="1000">
-      <img class="kit-logo" src="images/hub/leviathan_rhino_logo.png" alt="Leviathan: Rhino logo">
+      <img class="art" src="images/hub/rooten.jpg" alt="" width="1400" height="789">
+      <img class="kit-logo" src="rooten/images/logo.png" alt="Rooten logo">
     </div>
     <div class="kit-body">
-      <div class="kit-name">Leviathan: Rhino</div>
-      <div class="kit-line">An existential horror about the final days of an old man in a small village while a giant Leviathan draws near.</div>
+      <div class="kit-name">Rooten</div>
+      <div class="kit-line">A dark hand-drawn adventure: there is only you and the Forest.</div>
       <div class="kit-meta">Out on Steam</div>
       <div class="kit-open">Open press kit &rarr;</div>
     </div>
   </a>
+  </div>
 </main>
 
 <footer>
