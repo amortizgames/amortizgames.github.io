@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rooten — Press Kit</title>
+<meta name="description" content="Press kit for Rooten, a dark hand-drawn adventure by Amortiz Games: there is only you and the Forest. Screenshots, fact sheet and links.">
+<meta property="og:title" content="Rooten — Press Kit">
+<meta property="og:description" content="There is only you and the Forest. A dark hand-drawn adventure by Amortiz Games, out on Steam.">
+<meta property="og:image" content="https://amortizgames.github.io/presskit/rooten/images/key_art.jpg">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #07090a;
+  --card: #0f1312;
+  --line: rgba(255, 255, 255, 0.09);
+  --text: #dfe5e1;
+  --muted: #8f9a94;
+  --dim: #59635e;
+  --accent: #b9c9a3;
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.7;
+}
+
+a { color: var(--accent); }
+a:hover { color: #dbe8c8; }
+
+.more-games {
+  position: fixed; top: 1rem; left: 1rem; z-index: 50;
+  font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--text); text-decoration: none;
+  padding: 0.55rem 0.9rem; border: 1px solid rgba(185, 201, 163, 0.35);
+  background: rgba(7, 9, 10, 0.78); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.more-games:hover { border-color: var(--accent); }
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 1.25rem 3.5rem;
+  background: #000 url('images/key_art.jpg') center / cover no-repeat;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(7, 9, 10, 0.35) 0%, rgba(7, 9, 10, 0.55) 55%, var(--bg) 100%);
+}
+
+.hero-inner { position: relative; max-width: 46rem; }
+
+.studio {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-logo { width: min(80%, 420px); height: auto; margin: 0.5rem auto 0; display: block; }
+
+.hero h1 {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);
+}
+
+.tagline { font-size: 1.15rem; font-style: italic; color: var(--text); margin-top: 0.5rem; }
+
+.buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 2rem; }
+
+.btn {
+  font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
+  text-decoration: none; color: var(--accent);
+  padding: 0.8rem 1.5rem; border: 1px solid rgba(185, 201, 163, 0.5);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.btn:hover { background: rgba(185, 201, 163, 0.12); }
+.btn.solid { background: var(--accent); color: #0b0e0c; border-color: var(--accent); }
+.btn.solid:hover { background: #d3e0bf; color: #0b0e0c; }
+
+section { max-width: 1160px; margin: 0 auto; padding: 3.5rem 1.25rem 0; }
+
+h2 {
+  font-family: 'Cinzel', serif; font-weight: 600; font-size: 1.7rem; letter-spacing: 0.08em;
+  text-align: center; color: var(--accent); margin-bottom: 1.6rem;
+}
+
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 2.5rem; }
+
+.about p { color: var(--muted); margin-bottom: 1rem; }
+.about ul { color: var(--muted); padding-left: 1.2rem; }
+.about li { margin-bottom: 0.4rem; }
+
+.facts { background: var(--card); border: 1px solid var(--line); padding: 1.4rem 1.5rem; align-self: start; }
+.facts .row { display: flex; gap: 1rem; padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+.facts .row:last-child { border-bottom: 0; }
+.facts dt {
+  flex: none; width: 7.5rem; font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--dim); padding-top: 0.25em;
+}
+.facts dd { color: var(--text); }
+.facts small { display: block; color: var(--dim); font-size: 0.82em; }
+
+.sub { text-align: center; color: var(--muted); max-width: 36rem; margin: -0.8rem auto 1.8rem; }
+
+.shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1rem; }
+.shots a { display: block; border: 1px solid var(--line); overflow: hidden; background: #000; }
+.shots img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: transform 0.4s ease; }
+.shots a:hover img { transform: scale(1.03); }
+
+footer { text-align: center; padding: 3.5rem 1.25rem 3rem; color: var(--dim); font-size: 0.92rem; }
+footer p { margin-top: 0.6rem; }
+</style>
+</head>
+<body>
+
+<a class="more-games" href="../">&larr; More games</a>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="studio">Amortiz Games</div>
+    <img class="hero-logo" src="images/logo.png" alt="Rooten" width="640" height="360">
+    <h1>Rooten</h1>
+    <p class="tagline">There is only you and the Forest.</p>
+    <div class="buttons">
+      <a class="btn solid" href="https://store.steampowered.com/app/1584450/Rooten/" target="_blank" rel="noopener">View on Steam</a>
+      <a class="btn" href="#screenshots">&darr; Screenshots</a>
+      <a class="btn" href="../">More Games</a>
+    </div>
+  </div>
+</header>
+
+<section class="two">
+  <div class="about">
+    <h2 style="text-align:left">About</h2>
+    <p>When you arrived at the research station, no one met you. The helicopter that brought you here won't return for at least several days. You're trapped here alone, with no contact to the outside world. And there is only IT for many kilometers around. The Forest.</p>
+    <p>There is not a single living soul around, but something else hides in the darkness. A strange, inhuman creature lurks among the roots of the trees. It knows you're here. And for the first time in a long, long time, it has decided to come out.</p>
+    <ul>
+      <li>The world of the game has a life of its own. Events here will happen regardless of your presence.</li>
+      <li>A dense dark atmosphere.</li>
+      <li>Hand-drawn graphics that combine 2D and 3D.</li>
+      <li>Uncover the secrets of the Forest and the mystery of the station staff's disappearance.</li>
+      <li>Explore the many locations of the Forest. But remember: in the Forest, curiosity can be dangerous.</li>
+    </ul>
+  </div>
+  <dl class="facts">
+    <div class="row"><dt>Developer</dt><dd>Amortiz Games<small>Kyrgyzstan</small></dd></div>
+    <div class="row"><dt>Genre</dt><dd>Adventure, Indie</dd></div>
+    <div class="row"><dt>Released</dt><dd>8 September 2021<small>Steam</small></dd></div>
+    <div class="row"><dt>Platform</dt><dd>Steam<small>Windows</small></dd></div>
+    <div class="row"><dt>Price</dt><dd>$4.99 USD<small>Steam, US store</small></dd></div>
+    <div class="row"><dt>Languages</dt><dd>English, Russian</dd></div>
+    <div class="row"><dt>Steam reviews</dt><dd>Mostly Positive<small>79% of 105 reviews, as of 15 Nov 2026</small></dd></div>
+    <div class="row"><dt>Contact</dt><dd><a href="mailto:amortizgames@gmail.com">amortizgames@gmail.com</a></dd></div>
+    <div class="row"><dt>Links</dt><dd><a href="https://store.steampowered.com/app/1584450/Rooten/" target="_blank" rel="noopener">Steam</a> &middot; <a href="https://x.com/AmortizGames" target="_blank" rel="noopener">@AmortizGames on X</a></dd></div>
+  </dl>
+</section>
+
+<section id="screenshots">
+  <h2>Screenshots</h2>
+  <p class="sub">From the Steam release. Click any image for the full-size file (1920&times;1080). Free to use for editorial coverage, videos and streams.</p>
+  <div class="shots">
+    <a href="images/shot_1.jpg" target="_blank"><img src="images/web/shot_1.jpg" alt="Rooten: a path through the misty forest" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_2.jpg" target="_blank"><img src="images/web/shot_2.jpg" alt="Rooten: among the birches" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_3.jpg" target="_blank"><img src="images/web/shot_3.jpg" alt="Rooten: a strange glowing object on the rotting leaves" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_4.jpg" target="_blank"><img src="images/web/shot_4.jpg" alt="Rooten: the station camp in the fog" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_5.jpg" target="_blank"><img src="images/web/shot_5.jpg" alt="Rooten: damp sheets of paper on a table" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_6.jpg" target="_blank"><img src="images/web/shot_6.jpg" alt="Rooten: the door of an abandoned house" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_7.jpg" target="_blank"><img src="images/web/shot_7.jpg" alt="Rooten: something pale lies on the forest floor" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_8.jpg" target="_blank"><img src="images/web/shot_8.jpg" alt="Rooten: deep in the forest at night" loading="lazy" width="960" height="540"></a>
+    <a href="images/shot_9.jpg" target="_blank"><img src="images/web/shot_9.jpg" alt="Rooten: a clearing in the forest" loading="lazy" width="960" height="540"></a>
+  </div>
+</section>
+
+<footer>
+  <a class="btn solid" href="https://store.steampowered.com/app/1584450/Rooten/" target="_blank" rel="noopener">Steam page</a>
+  <p style="margin-top:1.8rem">Also from Amortiz Games: <a href="../shamans-ark/">The Shaman's Ark</a> &middot; <a href="../leviathan-rhino/">Leviathan: Rhino</a> &middot; <a href="../">More games</a></p>
+  <p>&copy; Amortiz Games</p>
+</footer>
+
+</body>
+</html>
