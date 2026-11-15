@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Shaman's Ark — Press Kit</title>
+<meta name="description" content="Press kit for The Shaman's Ark — a dark Metroidvania where your shamanic drum is both shield and blade against the encroaching Abyss.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ── Reset & Variables ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg-deep: #08090c;
+  --bg-surface: #0e1114;
+  --bg-card: #121619;
+  --accent-teal: #5BDBAD;
+  --accent-teal-light: #7AE8C4;
+  --accent-teal-glow: rgba(91, 219, 173, 0.3);
+  --accent-purple: #9B6BC4;
+  --accent-purple-glow: rgba(155, 107, 196, 0.25);
+  --accent-crimson: #C85A5A;
+  --text-primary: #dfe8e4;
+  --text-secondary: #8a9690;
+  --text-dim: #4d5c56;
+  --border-subtle: rgba(91, 219, 173, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-deep);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  background: var(--bg-deep);
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', 'Times New Roman', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  color: var(--accent-teal);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--accent-teal-light);
+  margin-bottom: 0.6rem;
+}
+
+p { color: var(--text-secondary); }
+
+a {
+  color: var(--accent-teal);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+a:hover { color: var(--accent-teal-light); }
+
+/* ── Layout ── */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* ── Organic Dividers ── */
+.divider {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+}
+.divider svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(91, 219, 173, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 30%, rgba(155, 107, 196, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(91, 219, 173, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, #060708 0%, #0a0c10 40%, #08090c 100%);
+  background-size: 200% 200%;
+  animation: heroDrift 25s ease-in-out infinite alternate;
+}
+
+@keyframes heroDrift {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 60% 40%; }
+  100% { background-position: 30% 70%; }
+}
+
+/* Grain overlay via SVG filter */
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  pointer-events: none;
+  filter: url(#grain);
+  background: transparent;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.hero-logo {
+  max-width: min(420px, 80vw);
+  height: auto;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 1.2s ease-out both;
+  filter: drop-shadow(0 0 40px rgba(91, 219, 173, 0.25));
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  font-weight: 900;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3em;
+  text-shadow: 0 0 60px rgba(91, 219, 173, 0.2), 0 2px 4px rgba(0,0,0,0.8);
+  animation: fadeUp 1.2s ease-out both;
+}
+
+.hero-tagline {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  animation: fadeUp 1.2s ease-out 0.3s both;
+}
+
+.hero-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+  animation: fadeUp 1.2s ease-out 0.15s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 1.2s ease-out 0.5s both;
+}
+
+.btn {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9em 2.2em;
+  border: 1px solid var(--accent-teal);
+  color: var(--accent-teal);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--accent-teal);
+  color: var(--bg-deep);
+  box-shadow: 0 0 30px var(--accent-teal-glow);
+}
+
+.btn-primary {
+  background: var(--accent-teal);
+  color: var(--bg-deep);
+}
+.btn-primary:hover {
+  background: var(--accent-teal-light);
+  color: var(--bg-deep);
+  box-shadow: 0 0 40px var(--accent-teal-glow);
+}
+
+/* ── About ── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-description h3 {
+  margin-top: 1.8rem;
+}
+.about-description h3:first-child {
+  margin-top: 0;
+}
+
+.about-description p {
+  margin-top: 0.5rem;
+}
+
+.about-description ul {
+  list-style: none;
+  margin-top: 0.8rem;
+  padding: 0;
+}
+
+.about-description li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.6rem;
+  color: var(--text-secondary);
+}
+
+.about-description li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  background: var(--accent-teal);
+  border-radius: 50%;
+}
+
+.about-description li strong {
+  color: var(--text-primary);
+}
+
+.quick-facts {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  padding: 2rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.quick-facts h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent-teal);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.fact-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.fact-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.fact-value {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+/* ── Screenshots ── */
+.screenshots-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.screenshots-intro p {
+  max-width: 500px;
+  margin: 0.5rem auto 0;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.2rem;
+}
+
+.screenshot-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ── Assets for creators ── */
+.assets-intro { text-align: center; max-width: 560px; margin: 0.5rem auto 2.5rem; }
+.assets-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
+.asset-card { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.2rem; background: var(--bg-card);
+  border: 1px solid var(--border-subtle); text-decoration: none; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.asset-card:hover { border-color: var(--accent-teal); box-shadow: 0 0 24px var(--accent-teal-glow); }
+.asset-card img { width: 100%; height: 150px; object-fit: contain; margin-bottom: 0.6rem; }
+.asset-wide { grid-column: 1 / -1; }
+.asset-wide img { height: auto; max-height: 260px; object-fit: cover; }
+.asset-light img { background: #cfd8d3; padding: 0.6rem; }
+.asset-name { font-family: 'Cinzel', serif; color: var(--text-primary); font-size: 0.95rem; letter-spacing: 0.06em; }
+.asset-meta { color: var(--text-dim); font-size: 0.8rem; }
+.assets-download { text-align: center; margin-top: 2.5rem; }
+.assets-download .btn { display: inline-block; }
+.assets-download p { margin-top: 0.9rem; color: var(--text-secondary); font-size: 0.9rem; }
+
+/* ── X posts ── */
+.x-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; align-items: start; }
+.x-post { min-width: 0; }
+.x-post .twitter-tweet { margin: 0 auto !important; }
+.x-post blockquote.twitter-tweet { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 1.2rem; color: var(--text-secondary); font-size: 0.92rem; }
+.x-post blockquote.twitter-tweet a { color: var(--accent-teal); }
+
+/* ── Video Cards ── */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2.5rem;
+}
+
+.video-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(91, 219, 173, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px var(--accent-teal-glow);
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-card .screenshot-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+  background: rgba(8, 9, 12, 0.75);
+  padding: 0.3em 0.7em;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(91, 219, 173, 0.2);
+}
+
+.screenshot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 40px var(--accent-teal-glow);
+}
+
+.screenshot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.screenshot-card:hover img {
+  transform: scale(1.04);
+}
+
+.screenshot-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1rem 0.8rem;
+  background: linear-gradient(transparent, rgba(8, 9, 12, 0.9));
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.35s ease;
+}
+
+.screenshot-card:hover .screenshot-label {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Media captions, clips, loops ── */
+.clip { min-width: 0; }
+.clip-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 0; }
+.loop-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); margin-top: 0; }
+.clip-card video { object-fit: contain; background: #000; }
+.media-caption {
+  display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
+  padding: 0.55rem 0.1rem 0; font-size: 0.85rem; color: var(--text-secondary);
+}
+.media-caption a {
+  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.12em;
+  text-transform: uppercase; white-space: nowrap;
+}
+.download-row { text-align: center; margin-top: 2.5rem; }
+.download-row span { display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim); }
+.trailer-container video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
+.trailer-links { margin-top: 1.2rem; font-size: 0.9rem; color: var(--text-dim); }
+.fact-row { gap: 1rem; }
+.fact-label { flex: none; padding-top: 0.15em; }
+.fact-value small { color: var(--text-dim); font-size: 0.8em; }
+
+/* ── Player quotes, let's plays ── */
+.quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+.quote { background: var(--bg-card); border: 1px solid var(--border-subtle); padding: 1.5rem 1.6rem; display: flex; flex-direction: column; }
+.quote-text { color: var(--text-primary); font-style: italic; }
+.quote-original { margin-top: 0.7rem; font-size: 0.85rem; color: var(--text-dim); }
+.quote figcaption { margin-top: auto; padding-top: 1rem; font-size: 0.8rem; }
+.play-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1.4rem 1.2rem; }
+.play { display: flex; flex-direction: column; gap: 0.15rem; color: var(--text-secondary); min-width: 0; }
+.play-thumb { display: block; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 0.5rem; background: var(--bg-card); }
+.play-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+.play:hover .play-thumb img { transform: scale(1.04); }
+.play-who { color: var(--text-primary); font-weight: 600; }
+.play-meta { font-size: 0.82rem; }
+.play-views { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-teal); margin-top: 0.2rem; }
+
+/* ── Lightbox ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(5, 6, 8, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  cursor: default;
+  box-shadow: 0 0 80px rgba(91, 219, 173, 0.1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.3s;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+.lightbox-close:hover { color: var(--text-primary); }
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: var(--text-dim);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 1rem;
+  transition: color 0.3s;
+  z-index: 1001;
+}
+.lightbox-nav:hover { color: var(--accent-teal); }
+.lightbox-prev { left: 1rem; }
+.lightbox-next { right: 1rem; }
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* ── Trailer ── */
+.trailer-section { text-align: center; }
+
+.trailer-container {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.trailer-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.trailer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: all 0.4s ease;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.trailer-link:hover {
+  color: var(--accent-teal);
+  background: rgba(91, 219, 173, 0.03);
+}
+
+.trailer-link:hover .trailer-play {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 30px var(--accent-teal-glow);
+}
+
+.trailer-play {
+  width: 72px;
+  height: 72px;
+  border: 2px solid var(--text-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.trailer-play svg {
+  width: 28px;
+  height: 28px;
+  margin-left: 4px;
+}
+
+.trailer-link span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.trailer-placeholder svg {
+  width: 64px;
+  height: 64px;
+  opacity: 0.3;
+}
+
+.trailer-placeholder span {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── Contact / Footer ── */
+.contact-section {
+  text-align: center;
+  padding-bottom: 8rem;
+}
+
+.contact-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contact-link {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.7em 1.8em;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.35s;
+}
+.contact-link:hover {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 20px var(--accent-teal-glow);
+}
+
+.contact-email {
+  margin-top: 1.5rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.footer-note {
+  margin-top: 3rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+/* ── Shaman Drum Easter Egg ── */
+.drum-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.drum-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-variant: small-caps;
+  transition: color 0.3s;
+}
+.drum-container:hover .drum-label { color: var(--accent-teal); }
+
+.drum-img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  transition: transform 0.1s;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+  image-rendering: pixelated;
+}
+
+.drum-img:active { transform: scale(0.90); }
+
+.drum-hit {
+  animation: drumPulse 0.3s ease-out;
+}
+
+@keyframes drumPulse {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(0.85); }
+  60%  { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Drum particles — spirit wisps */
+.drum-particle {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particleRise 1.2s ease-out forwards;
+  z-index: 899;
+}
+
+@keyframes particleRise {
+  0%   { opacity: 0.9; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0.2); }
+}
+
+/* Awakening effect — screen edge pulse */
+.awaken-pulse {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 898;
+  box-shadow: inset 0 0 120px 30px var(--accent-teal-glow);
+  opacity: 0;
+  animation: awakenGlow 1.5s ease-out forwards;
+}
+
+@keyframes awakenGlow {
+  0%   { opacity: 0; }
+  20%  { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+
+.screen-shake {
+  animation: shake 0.4s ease-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(0); }
+  15% { transform: translate(-3px, 2px); }
+  30% { transform: translate(2px, -3px); }
+  45% { transform: translate(-2px, 1px); }
+  60% { transform: translate(3px, -1px); }
+  75% { transform: translate(-1px, 2px); }
+}
+
+/* ── Fade-in animations ── */
+.fade-in {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Sections are hidden for the fade only once the script is running. */
+.js-anim .fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js-anim .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .quick-facts {
+    position: static;
+  }
+  .screenshot-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .section { padding: 3rem 1.2rem; }
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lightbox-nav { font-size: 1.8rem; }
+  .drum-container {
+    bottom: 1rem;
+    right: 1rem;
+  }
+  .drum-img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero-bg { animation: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- SVG Filters -->
+<svg style="position:absolute;width:0;height:0" aria-hidden="true">
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+  </filter>
+</svg>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-content">
+    <div class="hero-label">Amortiz Games presents</div>
+    <img src="../images/logo.png" alt="The Shaman's Ark" class="hero-logo">
+    <h1 class="hero-title">The Shaman's Ark</h1>
+    <p class="hero-tagline">A haunting Metroidvania where your shamanic drum is both shield and blade against the encroaching Abyss. Master rhythmic combat, channel forbidden power, and reclaim a dying world suspended above the void.</p>
+    <div class="hero-buttons">
+      <a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/" class="btn btn-primary" target="_blank" rel="noopener">View on Steam</a>
+      <a href="#press-materials" class="btn">&darr; Press Materials</a>
+      <a href="#assets" class="btn">&darr; Logos &amp; Art</a>
+      <a href="https://x.com/AmortizGames" class="btn" target="_blank" rel="noopener">X / Twitter</a>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section class="section fade-in" id="press-materials">
+  <h2>About the Game</h2>
+  <div class="about-grid">
+    <div class="about-description">
+      <h3>The Rhythm of Survival</h3>
+      <p>In a world consumed by shadow, your music is your only conduit. <strong style="color:var(--text-primary)">The Shaman's Ark</strong> is a dark Metroidvania rooted in the nomad and shaman culture of Central Asia, made by two developers from Kyrgyzstan. Here, silence is your enemy &mdash; and the drumbeat is your lifeblood.</p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li><strong>Ritualistic Combat</strong> &mdash; Master a unique rhythmic combat system. Your drum is a conduit for ancient power &mdash; time your strikes to the pulse of the ritual to crush the spawn of the Abyss.</li>
+        <li><strong>A Nomad's Post-Apocalypse</strong> &mdash; Explore the atmospheric reaches of the Ark. From desolate steppes to decaying sanctuaries, immerse yourself in a handcrafted world where folklore meets the end of days.</li>
+        <li><strong>Forbidden Power</strong> &mdash; Collect sacred amulets to build your shamanic might. Each one unlocks forbidden abilities &mdash; opening new paths and unleashing devastating echoes of the past.</li>
+        <li><strong>Colossal Trials</strong> &mdash; Face gargantuan titans that demand perfect timing and an unbreakable spirit.</li>
+        <li><strong>Echoes of the Past</strong> &mdash; Encounter a cast of enigmatic survivors &mdash; fallen warriors, twisted mystics &mdash; each bound to the Ark by secrets and debts older than memory.</li>
+        <li><strong>The Cycle Continues</strong> &mdash; Unlock <strong>New Game+</strong> to face a fractured, more punishing version of the world with every sacred relic intact.</li>
+      </ul>
+
+      <h3>The Shaman Returns</h3>
+      <p>Eons ago, when the world was swallowed by the Abyss, the Great Shaman struck a Covenant with the dark and sealed a refuge for his people: <strong style="color:var(--text-primary)">The Ark</strong> &mdash; a world held aloft above the void by the Abyss's own power. But legends fade, and the darkness does not forget.</p>
+      <p style="margin-top:0.8rem">The Abyss has begun to bleed into the Ark once more, drop by black drop. Just as the last spark of hope flickers out, a figure emerges from the gloom. <em style="color:var(--accent-teal)">The Shaman has returned.</em></p>
+      <p style="margin-top:0.8rem; color:var(--text-dim); font-style:italic">The Great Silence waits. Your drum does not.</p>
+    </div>
+
+    <aside class="quick-facts">
+      <h3>Factsheet</h3>
+      <div class="fact-row"><span class="fact-label">Developer</span><span class="fact-value">Amortiz Games<br>Kyrgyzstan</span></div>
+      <div class="fact-row"><span class="fact-label">Genre</span><span class="fact-value">Action-Adventure / Metroidvania with rhythm combat</span></div>
+      <div class="fact-row"><span class="fact-label">Released</span><span class="fact-value">30 July 2025 (Steam)</span></div>
+      <div class="fact-row"><span class="fact-label">Latest update</span><span class="fact-value">1.5.1, November 2026</span></div>
+      <div class="fact-row"><span class="fact-label">Platforms</span><span class="fact-value">PC (Steam): out now<br>iPhone &amp; iPad, Nintendo Switch: coming</span></div>
+      <div class="fact-row"><span class="fact-label">Price</span><span class="fact-value">$9.99 on Steam</span></div>
+      <div class="fact-row"><span class="fact-label">Steam reviews</span><span class="fact-value"><a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/#app_reviews_hash" target="_blank" rel="noopener">Positive: 97% of 47</a><br><small>as of 14 Nov 2026</small></span></div>
+      <div class="fact-row"><span class="fact-label">Languages</span><span class="fact-value">English, Russian, German, Spanish, Japanese, Korean, Simplified &amp; Traditional Chinese</span></div>
+      <div class="fact-row"><span class="fact-label">Input</span><span class="fact-value">Full controller support</span></div>
+      <div class="fact-row"><span class="fact-label">Engine</span><span class="fact-value">Unity</span></div>
+      <div class="fact-row"><span class="fact-label">Trailer</span><span class="fact-value"><a href="#trailer">Update 1.5 trailer</a></span></div>
+      <div class="fact-row"><span class="fact-label">Links</span><span class="fact-value"><a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/" target="_blank" rel="noopener">Steam</a> &middot; <a href="https://x.com/AmortizGames" target="_blank" rel="noopener">@AmortizGames on X</a></span></div>
+      <div class="fact-row" style="border:none"><span class="fact-label">Contact</span><span class="fact-value"><a href="mailto:amortizgames@gmail.com">amortizgames@gmail.com</a></span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C360,0 720,60 1080,20 C1260,5 1380,40 1440,30 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ SCREENSHOTS ═══════════════ -->
+<section class="section" id="screenshots">
+  <div class="screenshots-intro fade-in">
+    <h2>Screenshots</h2>
+    <p>Captured in the Steam version, most of them in update 1.5. Click any image for the full-size PNG. All assets are free to use for editorial coverage, videos and streams.</p>
+  </div>
+
+  <div class="screenshot-grid">
+    <div class="screenshot-card fade-in" data-index="0" data-full="../images/screenshots/01_valley_of_whispers.png">
+      <img src="../images/screenshots/web/01_valley_of_whispers.jpg" alt="Valley of Whispers: the shaman on a ledge above the misty valley" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Valley of Whispers</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="1" data-full="../images/screenshots/02_valley_bridge.png">
+      <img src="../images/screenshots/web/02_valley_bridge.jpg" alt="Valley of Whispers: a stone bridge fading into the fog" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">The Valley Bridge</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="2" data-full="../images/screenshots/03_mountain_pass_place_of_power.png">
+      <img src="../images/screenshots/web/03_mountain_pass_place_of_power.jpg" alt="Mountain Pass: an awakened Place of Power" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Place of Power</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="3" data-full="../images/screenshots/04_blood_river.png">
+      <img src="../images/screenshots/web/04_blood_river.jpg" alt="Blood River: twisted trees around a Place of Power" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Blood River</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="4" data-full="../images/screenshots/06_gardens_of_the_blue_flame.png">
+      <img src="../images/screenshots/web/06_gardens_of_the_blue_flame.jpg" alt="Gardens of the Blue Flame: a path lined with blue lights" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Gardens of the Blue Flame</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="5" data-full="../images/screenshots/07_celestial_eye.png">
+      <img src="../images/screenshots/web/07_celestial_eye.jpg" alt="Blood River: a Celestial Eye burning between dead trees" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">A Celestial Eye</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="6" data-full="../images/screenshots/08_rhythm_battle_mountain_pass.png">
+      <img src="../images/screenshots/web/08_rhythm_battle_mountain_pass.jpg" alt="Rhythm battle: notes travel the ring toward the four runes" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Rhythm Battle</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="7" data-full="../images/screenshots/09_rhythm_battle_gardens.png">
+      <img src="../images/screenshots/web/09_rhythm_battle_gardens.jpg" alt="Rhythm battle in the Gardens of the Blue Flame: a spirit attack lands" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Rhythm Battle: Spirit Attack</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="8" data-full="../images/screenshots/10_boss_stone_silence.png">
+      <img src="../images/screenshots/web/10_boss_stone_silence.jpg" alt="Boss: Stone Silence rising out of the violet fog" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Boss: Stone Silence</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="9" data-full="../images/screenshots/11_boss_eye_of_the_storm.png">
+      <img src="../images/screenshots/web/11_boss_eye_of_the_storm.jpg" alt="Boss: the Eye of the Storm sends rings of lightning across the arena" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Boss: Eye of the Storm</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="10" data-full="../images/screenshots/12_boss_fetid_source.png">
+      <img src="../images/screenshots/web/12_boss_fetid_source.jpg" alt="Boss: the Fetid Source towers over the shaman" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Boss: Fetid Source</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="11" data-full="../images/screenshots/13_world_map.png">
+      <img src="../images/screenshots/web/13_world_map.jpg" alt="The hand-drawn world map" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">World Map</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="12" data-full="../images/screenshots/14_trance_skills.png">
+      <img src="../images/screenshots/web/14_trance_skills.jpg" alt="The trance: the shaman walks the constellation of skills" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Trance: Skills</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="13" data-full="../images/screenshots/15_amulets.png">
+      <img src="../images/screenshots/web/15_amulets.jpg" alt="Amulet screen with the Cat&#39;s Paw selected" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Amulets</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="14" data-full="../images/screenshots/16_dialogue_riverlands.png">
+      <img src="../images/screenshots/web/16_dialogue_riverlands.jpg" alt="Dialogue with a musician in Riverlands" loading="lazy" width="1280" height="720">
+      <div class="screenshot-label">Riverlands: Townsfolk</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="15">
+      <img src="../images/screens/03_mountain_pass_red.jpg" alt="Mountain Pass — a crimson rift across the cliffs" loading="lazy" width="2560" height="1440">
+      <div class="screenshot-label">Mountain Pass: the Rift</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="16">
+      <img src="../images/screens/08_mountain_pass.jpg" alt="Mountain Pass — ice-blue ruins and a balbal idol" loading="lazy" width="2560" height="1440">
+      <div class="screenshot-label">Mountain Pass: Ruins</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="17">
+      <img src="../images/screens/05_giver_of_flies.jpg" alt="The Giver of Flies glows over a dark arena" loading="lazy" width="2560" height="1440">
+      <div class="screenshot-label">Giver of Flies</div>
+    </div>
+    <div class="screenshot-card fade-in" data-index="18">
+      <img src="../images/screens/07_rhythm_battle_giver_of_flies.jpg" alt="Rhythm battle against the Giver of Flies" loading="lazy" width="2560" height="1440">
+      <div class="screenshot-label">Boss: Giver of Flies</div>
+    </div>
+  </div>
+
+  <div class="video-grid">
+    <div class="video-card fade-in">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="../images/clip_mountains.mp4" type="video/mp4">
+      </video>
+      <span class="video-badge">Video</span>
+      <div class="screenshot-label">The Mountain Pass</div>
+    </div>
+    <div class="video-card fade-in">
+      <video autoplay muted loop playsinline preload="metadata">
+        <source src="../images/clip_boss_arena.mp4" type="video/mp4">
+      </video>
+      <span class="video-badge">Video</span>
+      <div class="screenshot-label">Boss Arena</div>
+    </div>
+  </div>
+  <p class="download-row fade-in"><a href="../images/download/TheShamansArk_PressKit.zip" class="btn btn-primary" download>Download all &middot; ZIP, 56 MB</a><span>15 screenshots (PNG, 1920&times;1080), 8 GIFs and the logo</span></p>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,25 C300,55 620,0 900,30 C1150,55 1320,10 1440,28 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ RHYTHM COMBAT ═══════════════ -->
+<section class="section" id="combat">
+  <div class="screenshots-intro fade-in">
+    <h2>Rhythm Combat</h2>
+    <p>Every fight is played on the drum. The shaman tunes the runes, then answers each note on the beat as it reaches its rune. Three whole fights, uncut, with the game&#39;s own sound.</p>
+  </div>
+  <div class="video-grid clip-grid">
+    <div class="clip">
+      <div class="video-card clip-card fade-in">
+        <video controls playsinline preload="none" poster="../video/combat_gardens_poster.jpg">
+          <source src="../video/combat_gardens.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Gardens of the Blue Flame &middot; 15 s, with sound</span><a href="../video/combat_gardens_1080p.mp4" download>MP4 1080p</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card clip-card fade-in">
+        <video controls playsinline preload="none" poster="../video/combat_mountain_pass_poster.jpg">
+          <source src="../video/combat_mountain_pass.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Mountain Pass &middot; 16 s, with sound</span><a href="../video/combat_mountain_pass_1080p.mp4" download>MP4 1080p</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card clip-card fade-in">
+        <video controls playsinline preload="none" poster="../video/combat_spore_grove_poster.jpg">
+          <source src="../video/combat_spore_grove.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Among the giant mushrooms &middot; 15 s, with sound</span><a href="../video/combat_spore_grove_1080p.mp4" download>MP4 1080p</a></div>
+    </div>
+  </div>
+
+  <div class="screenshots-intro fade-in" style="margin-top:4rem">
+    <h3>Short loops &amp; GIFs</h3>
+    <p>For articles, decks and posts. Every loop is also there as a GIF.</p>
+  </div>
+  <div class="video-grid loop-grid">
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/drum_and_rune_answer.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Notes answered on the runes</span><a href="../images/gifs/drum_and_rune_answer.gif" download>GIF</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/perfect_chain.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>A chain of hits</span><a href="../images/gifs/perfect_chain.gif" download>GIF</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/spirit_attack.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Spirit attack</span><a href="../images/gifs/spirit_attack.gif" download>GIF</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/boss_awakens.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>The Eye of the Storm awakens</span><a href="../images/gifs/boss_awakens.gif" download>GIF</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/boss_attack_dodge.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Dodging the boss&#39;s lightning</span><a href="../images/gifs/boss_attack_dodge.gif" download>GIF</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/place_of_power.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Waking a Place of Power</span><a href="../images/gifs/place_of_power.gif" download>GIF</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/spirits_of_the_fallen.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Drumming up a fallen creature&#39;s spirits</span><a href="../images/gifs/spirits_of_the_fallen.gif" download>GIF</a></div>
+    </div>
+    <div class="clip">
+      <div class="video-card fade-in">
+        <video autoplay muted loop playsinline preload="metadata">
+          <source src="../video/loops/exploration_valley.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="media-caption"><span>Into the Valley of Whispers</span><a href="../images/gifs/exploration_valley.gif" download>GIF</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,20 C180,50 360,10 540,35 C720,60 900,5 1080,30 C1260,55 1380,15 1440,25 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ ASSETS ═══════════════ -->
+<section class="section fade-in" id="assets">
+  <h2>Assets for Creators</h2>
+  <p class="assets-intro">Streaming or covering the game? Use anything here for thumbnails, overlays, videos and articles. No need to ask.</p>
+  <div class="assets-grid">
+    <a class="asset-card asset-wide" href="../downloads/key_art_library_hero_3840x1240.png" download>
+      <img src="../downloads/key_art_library_hero_3840x1240.png" alt="Key art: the shaman in a turquoise sigil inside a dark temple" loading="lazy">
+      <span class="asset-name">Key art</span><span class="asset-meta">PNG &middot; 3840&times;1240</span>
+    </a>
+    <a class="asset-card" href="../downloads/logo_shamans_ark_glow.png" download>
+      <img src="../downloads/logo_shamans_ark_glow.png" alt="The Shaman's Ark logo, glowing" loading="lazy">
+      <span class="asset-name">Game logo</span><span class="asset-meta">PNG, transparent &middot; 1013&times;614</span>
+    </a>
+    <a class="asset-card" href="../downloads/logo_shamans_ark_emblem_white.png" download>
+      <img src="../downloads/logo_shamans_ark_emblem_white.png" alt="The Shaman's Ark emblem logo, white" loading="lazy">
+      <span class="asset-name">Emblem logo</span><span class="asset-meta">PNG, transparent &middot; 1589&times;2252</span>
+    </a>
+    <a class="asset-card asset-light" href="../downloads/logo_amortizgames_dark.png" download>
+      <img src="../downloads/logo_amortizgames_dark.png" alt="Amortiz Games logo, dark" loading="lazy">
+      <span class="asset-name">Studio logo (dark)</span><span class="asset-meta">PNG, transparent &middot; 736&times;650</span>
+    </a>
+    <a class="asset-card" href="../downloads/logo_amortizgames_white.png" download>
+      <img src="../downloads/logo_amortizgames_white.png" alt="Amortiz Games logo, white" loading="lazy">
+      <span class="asset-name">Studio logo (white)</span><span class="asset-meta">PNG, transparent &middot; 736&times;650</span>
+    </a>
+  </div>
+  <div class="assets-download">
+    <a class="btn btn-primary" href="https://drive.google.com/drive/folders/1V3fxxjoTaqEggVpYxJ4TkNkC78ZsKRvB?usp=sharing" target="_blank" rel="noopener">Full press kit on Google Drive</a>
+    <p>Everything in full quality: screenshots, key art, logos, the release trailer (1080p), gameplay and battle videos with sound, a behind-the-scenes music video and 21 soundtrack tracks.</p>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C240,55 480,5 720,30 C960,55 1200,5 1440,30 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ TRAILER ═══════════════ -->
+<section class="section trailer-section fade-in" id="trailer">
+  <h2>Trailer</h2>
+  <h3 style="text-align:center; margin-bottom:0.8rem">The Shaman&#39;s Ark: Update 1.5 Trailer</h3>
+  <div class="trailer-container">
+    <video controls playsinline preload="none" poster="../video/trailer_1_5_poster.jpg">
+      <source src="../video/trailer_1_5.mp4" type="video/mp4">
+    </video>
+  </div>
+  <p class="trailer-links"><a href="../video/trailer_1_5.mp4" download>Download MP4 (720p, 13 MB)</a> &middot; <a href="https://youtu.be/zIIkxNXfl_w" target="_blank" rel="noopener">Release trailer on YouTube</a> &middot; <a href="https://youtu.be/t0HE1mRSv4Q" target="_blank" rel="noopener">Unmother demo on YouTube</a></p>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,35 C480,5 960,55 1440,25 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ PLAYERS ═══════════════ -->
+<section class="section" id="players">
+  <div class="screenshots-intro fade-in">
+    <h2>What Players Say</h2>
+    <p><a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/#app_reviews_hash" target="_blank" rel="noopener">Positive on Steam: 97% of 47 user reviews</a> (read 14 Nov 2026). The quotes below are verbatim; each links to its source. One is spoken, from a video, and links to the moment it is said.</p>
+  </div>
+  <div class="quote-grid">
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;Metroidvania meets rhythm game meets dark fantasy in a unique setting... It's as if this game was specially tailored to meet my demands.&rdquo;</p>
+      <figcaption><a href="https://steamcommunity.com/id/reixena/recommended/2433860/" target="_blank" rel="noopener">Steam review · 15.1 h played</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;Finished the game within 13 hours. No crucial bugs, just few minor. Personal best indie game of 2025 so far.&rdquo;</p>
+      <figcaption><a href="https://steamcommunity.com/profiles/76561198043511223/recommended/2433860/" target="_blank" rel="noopener">Steam review · 14.8 h played</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;The semi-two-dimensional art style and rhythm focused battling system are things that immediately pulled me in.&rdquo;</p>
+      <figcaption><a href="https://steamcommunity.com/id/tsgbeta/recommended/2433860/" target="_blank" rel="noopener">Steam review · 10.4 h played</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;There should be more games like this. That's how much fun it was.&rdquo;</p><p class="quote-original" lang="ja">Japanese, as spoken: &laquo;もっとあっていいんじゃないのかな、こういうゲーム。ってぐらい面白かった。&raquo;</p>
+      <figcaption><a href="https://youtu.be/NKsJpMr03GQ?t=3341" target="_blank" rel="noopener">南国まつたけ (Nangoku Matsutake), said on video · YouTube, final episode at 55:44</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;The Shaman's Ark is a little indie gem for metroidvania fans who want strong atmosphere, different combat and challenging exploration.&rdquo;</p><p class="quote-original" lang="es">Spanish original: &laquo;The Shaman’s Ark es una joyita indie para fans de los metroidvanias que buscan algo con atmósfera fuerte, combates distintos, y exploración desafiante.&raquo;</p>
+      <figcaption><a href="https://steamcommunity.com/profiles/76561198076198605/recommended/2433860/" target="_blank" rel="noopener">Steam review</a></figcaption>
+    </figure>
+    <figure class="quote fade-in">
+      <p class="quote-text">&ldquo;The QTE combat system drives you to despair at first, but you get used to it quickly and start dancing along to the rhythm.&rdquo;</p><p class="quote-original" lang="ru">Russian original: &laquo;Боевая система qte система по первости ввергает в отчаяние, но к ней быстро привыкаешь, начинаешь пританцовывать в ритм.&raquo;</p>
+      <figcaption><a href="https://steamcommunity.com/profiles/76561198369147514/recommended/2433860/" target="_blank" rel="noopener">Steam review · 7.5 h played</a></figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshots-intro fade-in" style="margin-top:4rem">
+    <h3>Played By</h3>
+    <p>Public let&#39;s plays and streams in four languages. View counts read on 14 Nov 2026.</p>
+  </div>
+  <div class="play-grid">
+    <a class="play fade-in" href="https://youtu.be/0-D-oJ_IjII" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/0-D-oJ_IjII/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">Zhain Gaming</span>
+      <span class="play-meta">English titles, no commentary &middot; YouTube</span>
+      <span class="play-meta">Full game walkthrough with the ending</span>
+      <span class="play-views">2,097 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/68-Lh2yGGDE" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/68-Lh2yGGDE/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">南国まつたけ Nangoku Matsutake</span>
+      <span class="play-meta">Japanese &middot; YouTube</span>
+      <span class="play-meta">Nine-part series, finished the game (part 1)</span>
+      <span class="play-views">450 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/kG8Xmi9XiXg" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/kG8Xmi9XiXg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">demajen</span>
+      <span class="play-meta">English &middot; YouTube</span>
+      <span class="play-meta">Map and review; also a full playthrough</span>
+      <span class="play-views">362 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/DuazN0AbxHg" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/DuazN0AbxHg/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">ねこみさご Nekomisago</span>
+      <span class="play-meta">Japanese &middot; YouTube</span>
+      <span class="play-meta">First-look stream</span>
+      <span class="play-views">191 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/v35vUhlD-cw" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/v35vUhlD-cw/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">Mariatxi Indie&acute;s Room</span>
+      <span class="play-meta">Spanish &middot; YouTube</span>
+      <span class="play-meta">First look</span>
+      <span class="play-views">78 views</span>
+    </a>
+    <a class="play fade-in" href="https://youtu.be/PQx5l1_QK08" target="_blank" rel="noopener">
+      <span class="play-thumb"><img src="https://i.ytimg.com/vi/PQx5l1_QK08/mqdefault.jpg" alt="" loading="lazy" width="320" height="180"></span>
+      <span class="play-who">Barabas &#9658; Play</span>
+      <span class="play-meta">Russian &middot; YouTube</span>
+      <span class="play-meta">First look</span>
+      <span class="play-views">32 views</span>
+    </a>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,28 C400,0 800,58 1440,22 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ X / TWITTER ═══════════════ -->
+<section class="section fade-in" id="x-posts">
+  <h2>From @AmortizGames</h2>
+  <p class="assets-intro">We post devlog clips, bosses and behind-the-scenes on X. A few favourites:</p>
+  <div class="x-grid">
+    <div class="x-post">
+      <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Silence is the enemy. The drum is your lifeblood. 🥁<br><br>The Shaman&#39;s Ark — a dark Metroidvania with rhythm-driven combat, set in a shamanic nomad&#39;s post-apocalypse.<br>Steam 🇯🇵 Full Japanese support<br>🛒 <a href="https://t.co/fLHlXY89DQ">https://t.co/fLHlXY89DQ</a><a href="https://x.com/hashtag/%E3%82%A4%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BC%E3%82%B2%E3%83%BC%E3%83%A0?src=hash&amp;ref_src=twsrc%5Etfw">#インディーゲーム</a> <a href="https://x.com/hashtag/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA%E3%82%B2%E3%83%BC%E3%83%A0?src=hash&amp;ref_src=twsrc%5Etfw">#個人開発ゲーム</a> <a href="https://x.com/hashtag/Metroidvania?src=hash&amp;ref_src=twsrc%5Etfw">#Metroidvania</a> <a href="https://x.com/hashtag/IndieGame?src=hash&amp;ref_src=twsrc%5Etfw">#IndieGame</a> <a href="https://t.co/9kjj4FnvrT">pic.twitter.com/9kjj4FnvrT</a></p>&mdash; Amortiz Games｜シャーマンズ・アーク (@AmortizGames) <a href="https://x.com/AmortizGames/status/2071140151796048073?ref_src=twsrc%5Etfw">June 28, 2026</a></blockquote>
+    </div>
+    <div class="x-post">
+      <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">The double jump is the last of the four abilities in The Shaman&#39;s Ark and you take it from the Giver of Flies. The map you already walked opens up again.<a href="https://x.com/hashtag/Metroidvania?src=hash&amp;ref_src=twsrc%5Etfw">#Metroidvania</a> <a href="https://x.com/hashtag/bossfight?src=hash&amp;ref_src=twsrc%5Etfw">#bossfight</a> <a href="https://x.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://t.co/tST6Cwl2jF">pic.twitter.com/tST6Cwl2jF</a></p>&mdash; Amortiz Games｜シャーマンズ・アーク (@AmortizGames) <a href="https://x.com/AmortizGames/status/2102684718135390520?ref_src=twsrc%5Etfw">September 23, 2026</a></blockquote>
+    </div>
+    <div class="x-post">
+      <blockquote class="twitter-tweet" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">A mechanic we found almost by accident while building the true ending: step through the right mushroom-gate and the world itself changes around you. Some of our favourite secrets live in there.<a href="https://x.com/hashtag/Metroidvania?src=hash&amp;ref_src=twsrc%5Etfw">#Metroidvania</a> <a href="https://x.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://x.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://t.co/Jrc1dYKmWw">pic.twitter.com/Jrc1dYKmWw</a></p>&mdash; Amortiz Games｜シャーマンズ・アーク (@AmortizGames) <a href="https://x.com/AmortizGames/status/2105175123552809170?ref_src=twsrc%5Etfw">September 30, 2026</a></blockquote>
+    </div>
+  </div>
+  <div class="assets-download">
+    <a class="btn" href="https://x.com/AmortizGames" target="_blank" rel="noopener">Follow @AmortizGames on X</a>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+    <path d="M0,30 C360,0 720,60 1080,20 C1260,5 1380,40 1440,30 L1440,60 L0,60 Z" fill="var(--bg-deep)"/>
+  </svg>
+</div>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="section contact-section fade-in" id="contact">
+  <h2>Links &amp; Contact</h2>
+  <div class="contact-links">
+    <a href="https://store.steampowered.com/app/2433860/The_Shamans_Ark/" class="contact-link" target="_blank" rel="noopener">Steam</a>
+    <a href="https://x.com/AmortizGames" class="contact-link" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="https://drive.google.com/drive/folders/1V3fxxjoTaqEggVpYxJ4TkNkC78ZsKRvB?usp=sharing" class="contact-link" target="_blank" rel="noopener">Full kit on Google Drive</a>
+    <a href="../images/download/TheShamansArk_PressKit.zip" class="contact-link" download>Download all</a>
+  </div>
+  <p class="contact-email" style="margin-top:2rem">Also from Amortiz Games: <a href="../leviathan-rhino/">Leviathan: Rhino press kit</a> &middot; <a href="../">All press kits</a></p>
+  <p class="contact-email">Press and business inquiries: <a href="mailto:amortizgames@gmail.com">amortizgames@gmail.com</a></p>
+  <p class="footer-note">&copy; Amortiz Games. All screenshots and assets may be used freely for editorial and press coverage.</p>
+</section>
+
+<!-- ═══════════════ LIGHTBOX ═══════════════ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Previous">&lsaquo;</button>
+  <button class="lightbox-nav lightbox-next" aria-label="Next">&rsaquo;</button>
+  <img src="" alt="">
+  <div class="lightbox-caption"></div>
+</div>
+
+<!-- ═══════════════ SHAMAN DRUM ═══════════════ -->
+<div class="drum-container" id="drum" role="button" aria-label="Shaman drum — click to play" tabindex="0">
+  <img src="../images/drum.png" alt="Shaman drum" class="drum-img" id="drum-img">
+  <span class="drum-label">wake the spirits</span>
+</div>
+
+<!-- Preload drum sounds -->
+<audio id="buben1" preload="auto" src="../sounds/buben_battle_1.ogg"></audio>
+<audio id="buben2" preload="auto" src="../sounds/buben_battle_2.ogg"></audio>
+<audio id="buben3" preload="auto" src="../sounds/buben_battle_3.ogg"></audio>
+<audio id="buben4" preload="auto" src="../sounds/buben_battle_4.ogg"></audio>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ── Intersection Observer for fade-ins ── */
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  document.documentElement.classList.add('js-anim');
+  document.querySelectorAll('.fade-in').forEach(function(el, i) {
+    el.style.transitionDelay = ((i % 4) * 0.06) + 's';
+    observer.observe(el);
+  });
+
+  /* ── Lightbox ── */
+  var lightbox  = document.getElementById('lightbox');
+  var lbImg     = lightbox.querySelector('img');
+  var lbCaption = lightbox.querySelector('.lightbox-caption');
+  var cards     = document.querySelectorAll('.screenshot-card');
+  var current   = 0;
+
+  function openLightbox(index) {
+    current = index;
+    var card = cards[current];
+    var img  = card.querySelector('img');
+    var label = card.querySelector('.screenshot-label');
+    lbImg.src = card.dataset.full || img.src;
+    lbImg.alt = img.alt;
+    lbCaption.textContent = label ? label.textContent : '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function navigate(dir) {
+    current = (current + dir + cards.length) % cards.length;
+    var card = cards[current];
+    var img  = card.querySelector('img');
+    var label = card.querySelector('.screenshot-label');
+    lbImg.src = card.dataset.full || img.src;
+    lbImg.alt = img.alt;
+    lbCaption.textContent = label ? label.textContent : '';
+  }
+
+  cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+      openLightbox(parseInt(this.dataset.index));
+    });
+  });
+
+  lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.querySelector('.lightbox-prev').addEventListener('click', function(e) { e.stopPropagation(); navigate(-1); });
+  lightbox.querySelector('.lightbox-next').addEventListener('click', function(e) { e.stopPropagation(); navigate(1); });
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'ArrowLeft')   navigate(-1);
+    if (e.key === 'ArrowRight')  navigate(1);
+  });
+
+  /* ── Shaman Drum ── */
+  var drum    = document.getElementById('drum');
+  var drumImg = document.getElementById('drum-img');
+  var hitTimes = [];
+
+  // Collect the 4 drum sound elements
+  var drumSounds = [
+    document.getElementById('buben1'),
+    document.getElementById('buben2'),
+    document.getElementById('buben3'),
+    document.getElementById('buben4')
+  ];
+
+  function playDrumSound() {
+    var sound = drumSounds[Math.floor(Math.random() * drumSounds.length)];
+    sound.currentTime = 0;
+    sound.play().catch(function() {});
+  }
+
+  function spawnParticles(x, y) {
+    for (var i = 0; i < 6; i++) {
+      var p   = document.createElement('div');
+      p.className = 'drum-particle';
+      var angle = (Math.PI * 2 / 6) * i + (Math.random() - 0.5) * 0.5;
+      var dist  = 40 + Math.random() * 60;
+      p.style.left = x + 'px';
+      p.style.top  = y + 'px';
+      p.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
+      p.style.setProperty('--dy', (-Math.abs(Math.sin(angle)) * dist - 20) + 'px');
+      // Spirit colors: teal and purple, matching the game
+      var colors = ['#5BDBAD', '#7AE8C4', '#9B6BC4', '#b088d4'];
+      p.style.background = colors[Math.floor(Math.random() * colors.length)];
+      p.style.width  = (2 + Math.random() * 4) + 'px';
+      p.style.height = p.style.width;
+      document.body.appendChild(p);
+      setTimeout(function(el) { el.remove(); }, 1300, p);
+    }
+  }
+
+  function checkAwakening() {
+    var now = Date.now();
+    hitTimes.push(now);
+    hitTimes = hitTimes.filter(function(t) { return now - t < 2000; });
+
+    if (hitTimes.length >= 5) {
+      var pulse = document.createElement('div');
+      pulse.className = 'awaken-pulse';
+      document.body.appendChild(pulse);
+      setTimeout(function() { pulse.remove(); }, 1600);
+
+      document.body.classList.add('screen-shake');
+      setTimeout(function() { document.body.classList.remove('screen-shake'); }, 500);
+
+      hitTimes = [];
+    }
+  }
+
+  function onDrumHit(e) {
+    e.preventDefault();
+
+    drumImg.classList.remove('drum-hit');
+    void drumImg.offsetWidth;
+    drumImg.classList.add('drum-hit');
+
+    playDrumSound();
+
+    var rect = drumImg.getBoundingClientRect();
+    var cx   = rect.left + rect.width / 2;
+    var cy   = rect.top + rect.height * 0.4;
+    spawnParticles(cx, cy);
+
+    checkAwakening();
+  }
+
+  drum.addEventListener('click', onDrumHit);
+  drum.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    onDrumHit(e);
+  }, { passive: false });
+
+  drum.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onDrumHit(e);
+    }
+  });
+})();
+</script>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
