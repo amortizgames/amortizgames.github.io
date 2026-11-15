@@ -757,12 +757,16 @@ a:hover { color: var(--accent-teal-light); }
 
 /* ── Fade-in animations ── */
 .fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.fade-in.visible {
+/* Sections are hidden for the fade only once the script is running. */
+.js-anim .fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.js-anim .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1354,33 +1358,13 @@ a:hover { color: var(--accent-teal-light); }
     });
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
+  document.documentElement.classList.add('js-anim');
   document.querySelectorAll('.fade-in').forEach(function(el, i) {
-    el.style.transitionDelay = (i * 0.08) + 's';
+    el.style.transitionDelay = ((i % 4) * 0.06) + 's';
     observer.observe(el);
   });
 
-  /* ── Media captions, clips, loops ── */
-.clip { min-width: 0; }
-.clip-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-top: 0; }
-.loop-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); margin-top: 0; }
-.clip-card video { object-fit: contain; background: #000; }
-.media-caption {
-  display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
-  padding: 0.55rem 0.1rem 0; font-size: 0.85rem; color: var(--text-secondary);
-}
-.media-caption a {
-  font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.12em;
-  text-transform: uppercase; white-space: nowrap;
-}
-.download-row { text-align: center; margin-top: 2.5rem; }
-.download-row span { display: block; margin-top: 1rem; font-size: 0.85rem; color: var(--text-dim); }
-.trailer-container video { position: absolute; inset: 0; width: 100%; height: 100%; background: #000; }
-.trailer-links { margin-top: 1.2rem; font-size: 0.9rem; color: var(--text-dim); }
-.fact-row { gap: 1rem; }
-.fact-label { flex: none; padding-top: 0.15em; }
-.fact-value small { color: var(--text-dim); font-size: 0.8em; }
-
-/* ── Lightbox ── */
+  /* ── Lightbox ── */
   var lightbox  = document.getElementById('lightbox');
   var lbImg     = lightbox.querySelector('img');
   var lbCaption = lightbox.querySelector('.lightbox-caption');
