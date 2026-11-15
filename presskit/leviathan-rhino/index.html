@@ -57,6 +57,11 @@ p { color: var(--ink-2); }
 .sub { color: var(--ink-3); max-width: 640px; margin-bottom: 2rem; }
 .rule { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); border: 0; }
 
+/* ── More games ── */
+.more-games { position: fixed; top: 1rem; left: 1rem; z-index: 600; font-family: var(--pixel); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); padding: .55rem .9rem; border: 1px solid var(--ink-3); background: rgba(10,11,11,.78); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.more-games .arr { font-family: var(--body); font-size: .9rem; letter-spacing: 0; }
+.more-games:hover { border-color: var(--ink); color: #fff; }
+
 /* ── Hero ── */
 .hero { position: relative; background: var(--bg); overflow: hidden; }
 .hero img.bg { display: block; width: 100%; height: auto; aspect-ratio: 3840 / 1646; max-height: 78vh; object-fit: cover; }
@@ -98,7 +103,8 @@ p { color: var(--ink-2); }
 .shots .crt { transition: transform .3s, border-color .3s; }
 .shots button:hover .crt, .shots button:focus-visible .crt { transform: translateY(-3px); border-color: var(--fog); }
 .gifs { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
-.gifs figcaption, .shots .cap { font-family: var(--pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); padding-top: .5rem; }
+.clips { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+.clips figcaption, .gifs figcaption a, .gifs figcaption, .shots .cap { font-family: var(--pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); padding-top: .5rem; }
 
 /* ── Played by ── */
 .played { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; }
@@ -157,6 +163,8 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
 </head>
 <body>
 
+<a class="more-games" href="../"><span class="arr">&larr;</span> More games</a>
+
 <header class="hero">
   <img class="bg" src="images/keyart_church_header.jpg" alt="Leviathan: Rhino key art — a wooden village church under a red storm sky, a creature in the haze">
   <div class="hero-inner">
@@ -167,6 +175,7 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
       <a class="btn solid" href="https://store.steampowered.com/app/4784510/Leviathan_Rhino/" target="_blank" rel="noopener">View on Steam</a>
       <a class="btn" href="#trailer">Watch trailer</a>
       <a class="btn" href="#downloads">Assets</a>
+      <a class="btn" href="../">More Games</a>
     </div>
   </div>
 </header>
@@ -199,7 +208,7 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
         <div class="row"><dt>Price</dt><dd>$5.87 USD<small>Steam, US store; launch offer 15% off ($4.98) until 20 November</small></dd></div>
         <div class="row"><dt>Platforms</dt><dd>Steam: out now<small>iPhone / iPad and Nintendo Switch: coming</small></dd></div>
         <div class="row"><dt>Genre</dt><dd>Psychological horror, walking simulator<small>first person, single-player</small></dd></div>
-        <div class="row"><dt>Steam reviews</dt><dd>Very Positive<small>95% of 120 reviews, as of 14 Nov 2026</small></dd></div>
+        <div class="row"><dt>Steam reviews</dt><dd>Very Positive<small>95% of 135 reviews, as of 15 Nov 2026</small></dd></div>
         <div class="row"><dt>Languages</dt><dd>12<small>English, Russian, German, French, Spanish (Spain), Spanish (Latin America), Ukrainian, Polish, Finnish, Serbian, Japanese, Simplified Chinese</small></dd></div>
         <div class="row"><dt>Engine</dt><dd>Unity</dd></div>
         <div class="row"><dt>Contact</dt><dd><a href="mailto:amortizgames@gmail.com">amortizgames＠gmail.com</a></dd></div>
@@ -219,12 +228,23 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
       <source src="video/leviathan_rhino_trailer_720p.mp4" type="video/mp4">
     </video>
   </div>
+  <p class="asof"><a href="https://drive.google.com/file/d/1p95OuR2oWUJnGLwcqCxMGzaI76omVNJ4/view?usp=drivesdk" target="_blank" rel="noopener">Trailer in 1080p</a> (Google Drive) &middot; <a href="video/leviathan_rhino_trailer_720p.mp4" download>MP4 720p</a></p>
 
-  <div class="gifs">
-    <figure><div class="crt"><img src="video/gif_1.gif" alt="Animated clip: the path to the house, the cow shed, the living room" loading="lazy"></div><figcaption>The house</figcaption></figure>
-    <figure><div class="crt"><img src="video/gif_2.gif" alt="Animated clip: sheep, the village road, the shop and a green car" loading="lazy"></div><figcaption>The village</figcaption></figure>
-    <figure><div class="crt"><img src="video/gif_3.gif" alt="Animated clip: the graveyard and the well at dusk" loading="lazy"></div><figcaption>The graveyard</figcaption></figure>
-    <figure><div class="crt"><img src="video/gif_4.gif" alt="Animated clip: the sky turns red" loading="lazy"></div><figcaption>The storm</figcaption></figure>
+  <h3 style="margin-top:3rem">Gameplay clips, with the game&rsquo;s own sound</h3>
+  <p class="sub">Uncut stretches of play, no commentary or music added. The game&rsquo;s ambience is quiet; turn the volume up. 1080p versions are in the Google Drive kit.</p>
+  <div class="clips">
+    <figure><div class="crt"><video controls playsinline preload="none" poster="video/clip_cow_poster.jpg"><source src="video/clip_cow.mp4" type="video/mp4"></video></div><figcaption>The cow in her shed &middot; 13 s</figcaption></figure>
+    <figure><div class="crt"><video controls playsinline preload="none" poster="video/clip_yard_poster.jpg"><source src="video/clip_yard.mp4" type="video/mp4"></video></div><figcaption>The yard and the well &middot; 15 s</figcaption></figure>
+    <figure><div class="crt"><video controls playsinline preload="none" poster="video/clip_storm_road_poster.jpg"><source src="video/clip_storm_road.mp4" type="video/mp4"></video></div><figcaption>The road under the storm &middot; 15 s</figcaption></figure>
+  </div>
+
+  <h3 style="margin-top:3rem">Short loops and GIFs</h3>
+  <p class="sub">For articles, decks and posts. Every loop is also there as a GIF.</p>
+  <div class="gifs" style="margin-top:0">
+    <figure><div class="crt"><video autoplay muted loop playsinline preload="metadata"><source src="video/loop_1.mp4" type="video/mp4"></video></div><figcaption>The house &middot; <a href="video/gif_1.gif" download>GIF</a></figcaption></figure>
+    <figure><div class="crt"><video autoplay muted loop playsinline preload="metadata"><source src="video/loop_2.mp4" type="video/mp4"></video></div><figcaption>The village &middot; <a href="video/gif_2.gif" download>GIF</a></figcaption></figure>
+    <figure><div class="crt"><video autoplay muted loop playsinline preload="metadata"><source src="video/loop_3.mp4" type="video/mp4"></video></div><figcaption>The graveyard &middot; <a href="video/gif_3.gif" download>GIF</a></figcaption></figure>
+    <figure><div class="crt"><video autoplay muted loop playsinline preload="metadata"><source src="video/loop_4.mp4" type="video/mp4"></video></div><figcaption>The storm &middot; <a href="video/gif_4.gif" download>GIF</a></figcaption></figure>
   </div>
 </section>
 
@@ -232,7 +252,7 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
 
 <section class="wrap" id="screenshots">
   <h2>Screenshots</h2>
-  <p class="sub">Click an image for full size. All captured in-game.</p>
+  <p class="sub">Click an image for full size (1920&times;1080). All captured in-game. Lossless PNG versions are in the Google Drive kit and the ZIP below.</p>
   <div class="shots" id="shots">
     <button data-full="images/shot_1_cow_shed.jpg"><div class="crt"><img src="images/thumb_1.jpg" alt="The cow in her shed" loading="lazy"></div></button>
     <button data-full="images/shot_2_living_room.jpg"><div class="crt"><img src="images/thumb_2.jpg" alt="The living room" loading="lazy"></div></button>
@@ -252,27 +272,27 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
   <p class="sub">Public let's plays and streams of the Steam release. Thumbnails link to the videos on YouTube.</p>
   <div class="played">
     <article class="card">
-      <a class="thumb" href="https://www.youtube.com/watch?v=qEGBoM4wwLs" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/qEGBoM4wwLs/hqdefault.jpg" alt="BigGaming64 video thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
-      <div class="meta"><div class="who">BigGaming64</div><div class="views">76,898 views</div><div class="line">English &middot; YouTube &middot; video &middot; 6 Nov 2026</div></div>
+      <a class="thumb" href="https://www.youtube.com/watch?v=qEGBoM4wwLs" target="_blank" rel="noopener"><img src="images/played_qEGBoM4wwLs.jpg" alt="BigGaming64 video thumbnail" loading="lazy"></a>
+      <div class="meta"><div class="who">BigGaming64</div><div class="views">79,999 views</div><div class="line">English &middot; YouTube &middot; video &middot; 6 Nov 2026</div></div>
     </article>
     <article class="card">
-      <a class="thumb" href="https://www.youtube.com/watch?v=kDC6jgsPLJg" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kDC6jgsPLJg/hqdefault.jpg" alt="GENuINE993 video thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
-      <div class="meta"><div class="who">GENuINE993</div><div class="views">39,437 views</div><div class="line">Spanish &middot; YouTube &middot; video &middot; 10 Nov 2026</div></div>
+      <a class="thumb" href="https://www.youtube.com/watch?v=kDC6jgsPLJg" target="_blank" rel="noopener"><img src="images/played_kDC6jgsPLJg.jpg" alt="GENuINE993 video thumbnail" loading="lazy"></a>
+      <div class="meta"><div class="who">GENuINE993</div><div class="views">41,216 views</div><div class="line">Spanish &middot; YouTube &middot; video &middot; 10 Nov 2026</div></div>
     </article>
     <article class="card">
-      <a class="thumb" href="https://www.youtube.com/watch?v=oT1zx7qojbY" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/oT1zx7qojbY/hqdefault.jpg" alt="Первый Хоррор Канал stream thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
-      <div class="meta"><div class="who">Первый Хоррор Канал</div><div class="views">28,195 views</div><div class="line">Russian &middot; YouTube &middot; live stream &middot; 6 Nov 2026</div></div>
+      <a class="thumb" href="https://www.youtube.com/watch?v=oT1zx7qojbY" target="_blank" rel="noopener"><img src="images/played_oT1zx7qojbY.jpg" alt="Первый Хоррор Канал stream thumbnail" loading="lazy"></a>
+      <div class="meta"><div class="who">Первый Хоррор Канал</div><div class="views">28,887 views</div><div class="line">Russian &middot; YouTube &middot; live stream &middot; 6 Nov 2026</div></div>
     </article>
     <article class="card">
-      <a class="thumb" href="https://www.youtube.com/watch?v=dqTOCSfk4g0" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/dqTOCSfk4g0/hqdefault.jpg" alt="Datura Plays stream thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
-      <div class="meta"><div class="who">Datura Plays</div><div class="views">1,899 views</div><div class="line">English &middot; YouTube &middot; live stream, full game &middot; 6 Nov 2026</div></div>
+      <a class="thumb" href="https://www.youtube.com/watch?v=dqTOCSfk4g0" target="_blank" rel="noopener"><img src="images/played_dqTOCSfk4g0.jpg" alt="Datura Plays stream thumbnail" loading="lazy"></a>
+      <div class="meta"><div class="who">Datura Plays</div><div class="views">2,051 views</div><div class="line">English &middot; YouTube &middot; live stream, full game &middot; 6 Nov 2026</div></div>
     </article>
     <article class="card">
-      <a class="thumb" href="https://www.youtube.com/watch?v=kxVpCOVWdR8" target="_blank" rel="noopener"><img src="https://i.ytimg.com/vi/kxVpCOVWdR8/hqdefault.jpg" alt="眩ねも stream thumbnail" loading="lazy" referrerpolicy="no-referrer"></a>
-      <div class="meta"><div class="who">眩ねも</div><div class="views">120 views</div><div class="line">Japanese &middot; YouTube &middot; live stream &middot; 12 Nov 2026</div></div>
+      <a class="thumb" href="https://www.youtube.com/watch?v=kxVpCOVWdR8" target="_blank" rel="noopener"><img src="images/played_kxVpCOVWdR8.jpg" alt="眩ねも stream thumbnail" loading="lazy"></a>
+      <div class="meta"><div class="who">眩ねも</div><div class="views">134 views</div><div class="line">Japanese &middot; YouTube &middot; live stream &middot; 12 Nov 2026</div></div>
     </article>
   </div>
-  <p class="asof">View counts read on 14 November 2026 and still rising.</p>
+  <p class="asof">View counts read on 15 November 2026 and still rising.</p>
 </section>
 
 <hr class="rule">
@@ -281,7 +301,7 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
   <h2>What players say</h2>
   <div class="score">
     <span class="big">Very Positive</span>
-    <span class="small">95% of 120 Steam user reviews are positive (14 Nov 2026) &middot; <a href="https://store.steampowered.com/app/4784510/Leviathan_Rhino/#app_reviews_hash" target="_blank" rel="noopener">read them on Steam</a></span>
+    <span class="small">95% of 135 Steam user reviews are positive (15 Nov 2026) &middot; <a href="https://store.steampowered.com/app/4784510/Leviathan_Rhino/#app_reviews_hash" target="_blank" rel="noopener">read them on Steam</a></span>
   </div>
   <div class="quotes">
     <blockquote class="lead">
@@ -316,13 +336,18 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
 
 <section class="wrap" id="downloads">
   <h2>Logo and key art</h2>
-  <p class="sub">Free to use for editorial coverage. Right-click to save.</p>
+  <p class="sub">Free to use for editorial coverage. Click to open, or use the download links.</p>
   <div class="dl">
-    <figure><div class="crt" style="background:#161818"><a href="images/title_logo.png" style="border:0"><img src="images/title_logo.png" alt="Leviathan: Rhino title logo" loading="lazy" style="padding:1.5rem"></a></div><figcaption>Title logo (PNG, transparent)</figcaption></figure>
-    <figure><div class="crt"><a href="images/keyart_church_header.jpg" style="border:0"><img src="images/keyart_church_header.jpg" alt="Key art: the church under a red storm" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: church (2560 px)</figcaption></figure>
-    <figure><div class="crt"><a href="images/keyart_graveyard_header.jpg" style="border:0"><img src="images/keyart_graveyard_header.jpg" alt="Key art: the graveyard in fog" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: graveyard (2560 px)</figcaption></figure>
-    <figure><div class="crt"><a href="images/keyart_village_header.jpg" style="border:0"><img src="images/keyart_village_header.jpg" alt="Key art: the village road" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: village road (2560 px)</figcaption></figure>
+    <figure><div class="crt" style="background:#161818"><a href="images/title_logo.png" style="border:0"><img src="images/title_logo.png" alt="Leviathan: Rhino title logo" loading="lazy" style="padding:1.5rem"></a></div><figcaption>Title logo (PNG, transparent) &middot; <a href="images/title_logo.png" download>download</a></figcaption></figure>
+    <figure><div class="crt"><a href="images/keyart_church_header.jpg" style="border:0"><img src="images/keyart_church_header.jpg" alt="Key art: the church under a red storm" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: church (2560 px) &middot; <a href="images/keyart_church_header.jpg" download>download</a></figcaption></figure>
+    <figure><div class="crt"><a href="images/keyart_graveyard_header.jpg" style="border:0"><img src="images/keyart_graveyard_header.jpg" alt="Key art: the graveyard in fog" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: graveyard (2560 px) &middot; <a href="images/keyart_graveyard_header.jpg" download>download</a></figcaption></figure>
+    <figure><div class="crt"><a href="images/keyart_village_header.jpg" style="border:0"><img src="images/keyart_village_header.jpg" alt="Key art: the village road" loading="lazy" referrerpolicy="no-referrer"></a></div><figcaption>Key art: village road (2560 px) &middot; <a href="images/keyart_village_header.jpg" download>download</a></figcaption></figure>
   </div>
+  <div class="buttons" style="margin-top:2rem">
+    <a class="btn solid" href="downloads/leviathan_rhino_press_kit.zip" download>Download all (ZIP, 1.7 MB)</a>
+    <a class="btn solid" href="https://drive.google.com/drive/folders/1TgH5D7_RnBiZ034q7wbgCwqqbz5FG1S6?usp=sharing" target="_blank" rel="noopener">Full press kit on Google Drive</a>
+  </div>
+  <p class="asof">The ZIP holds the logo, the three key art images and the eight screenshots. The Google Drive folder also has the trailer and gameplay clips in 1080p, lossless PNG screenshots and the GIFs.</p>
 </section>
 
 <hr class="rule">
@@ -335,7 +360,10 @@ blockquote footer { margin-top: .9rem; font-size: .82rem; color: var(--ink-3); }
   </div>
   <div class="also">
     <p>Also from AmortizGames</p>
-    <a class="btn" href="../">The Shaman's Ark press kit</a>
+    <div class="buttons" style="justify-content:center">
+      <a class="btn" href="../">More games</a>
+      <a class="btn" href="../shamans-ark/">The Shaman's Ark press kit</a>
+    </div>
   </div>
   <p class="fine">&copy; AmortizGames. The Steam release is published by solarsuit.games; all other platforms are handled by AmortizGames.</p>
 </section>
